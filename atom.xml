@@ -6,7 +6,7 @@
   <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://yihuayishijian.github.io/"/>
-  <updated>2021-11-09T10:26:27.216Z</updated>
+  <updated>2021-11-09T10:35:57.419Z</updated>
   <id>https://yihuayishijian.github.io/</id>
   
   <author>
@@ -17,36 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Spring笔记</title>
-    <link href="https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/"/>
-    <id>https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/</id>
-    <published>2021-11-08T00:48:32.000Z</published>
-    <updated>2021-11-09T10:26:27.216Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Spring的配置&quot;&gt;&lt;a href=&quot;#Spring的配置&quot; class=&quot;headerlink&quot; title=&quot;Spring的配置&quot;&gt;&lt;/a&gt;Spring的配置&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在pom.xml里面导入坐标&lt;/p&gt;
-&lt;pre class=&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="spring,spring-mvc,markdown,typoa" scheme="https://yihuayishijian.github.io/tags/spring-spring-mvc-markdown-typoa/"/>
-    
-  </entry>
-  
-  <entry>
     <title>浮生日记</title>
     <link href="https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/"/>
     <id>https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/</id>
     <published>2021-11-08T00:47:49.000Z</published>
-    <updated>2021-11-09T06:49:09.693Z</updated>
+    <updated>2021-11-09T10:35:57.419Z</updated>
     
     
       
@@ -59,6 +34,10 @@
     
     
     
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
     
   </entry>
   
