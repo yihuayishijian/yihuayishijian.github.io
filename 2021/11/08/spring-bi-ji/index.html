@@ -5,7 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Spring笔记, HTML,CSS,JavaScript,Java,JavaWeb,Ssm等">
-    <meta name="description" content="Spring笔记 | 郭硕的第一个博客（HEXO）">
+    <meta name="description" content="Spring的配置
+在pom.xml里面导入坐标
+&amp;lt;!--        A导入spring的坐标--&gt;
+        &amp;lt;dependency&gt;
+            &amp;lt;groupId&gt;org.springframew">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -432,9 +436,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/spring-spring-mvc-markdown-typoa/">
+                                <span class="chip bg-color">spring,spring-mvc,markdown,typoa</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -453,21 +461,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-08
+                    2021-11-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    768
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -487,7 +495,151 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="Spring的配置"><a href="#Spring的配置" class="headerlink" title="Spring的配置"></a>Spring的配置</h1><ol>
+<li><p>在pom.xml里面导入坐标</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--        A导入spring的坐标--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-context<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.0.5.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>创建dao及其实现</p>
+</li>
+<li><p>创建配置文件</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>userDao<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.example.dao.impl.UserDaoImpl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>测试类测试</p>
+</li>
+</ol>
+<h1 id="Spring-Mvc"><a href="#Spring-Mvc" class="headerlink" title="Spring-Mvc"></a>Spring-Mvc</h1><h4 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h4><ul>
+<li><p>MVC（module,view,controller）</p>
+<p> 客户端–&gt;Tomcat服务器（Tomcat引擎（接收客户端请求，封装res和req，调用请求资源）+web应用（Spring-Mvc代替servlet执行共有的行为）+POJO特有行为）</p>
+<h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><ol>
+<li>导入spring—mvc包</li>
+<li>配置Servlet</li>
+<li>编写pojo，简单的Javabean（简称为控制器controller）</li>
+<li>通过注解的方式将Controller配置到Spring容器当中@Component/@Controller</li>
+<li>配置spring-mvc.xml配置文件（配置组件扫描）</li>
+<li>执行访问测试</li>
+</ol>
+<p><img src="C:\Users\86153\AppData\Roaming\Typora\typora-user-images\image-20211109094040984.png" alt="image-20211109094040984"></p>
+<ul>
+<li><p>开发配置</p>
+<ol>
+<li>导入SpringMvc相关坐标</li>
+<li>配置SpringMvc核心控制器DispathcerServlet</li>
+<li>创建Controller和视图</li>
+<li>使用注解配置</li>
+<li>配置Spring-Mvc核心文件spring-mvc.xml(<strong>组件扫描</strong>)</li>
+<li>客户端发请求，测试</li>
+</ol>
+</li>
+<li><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--在pom.xml文件中        1.导入spring-mvc的坐标--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-webmvc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.0.5.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li></li>
+<li><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- 在web.xml中   2.配置前端控制器  注入初始化的参数告知spring-mcv.xml的位置--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>DispatcherServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-class</span><span class="token punctuation">></span></span>org.springframework.web.servlet.DispatcherServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-class</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>init-param</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-name</span><span class="token punctuation">></span></span>contextConfigLocation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-name</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-value</span><span class="token punctuation">></span></span>classpath:spring-mcv.xml<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-value</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>init-param</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>load-on-startup</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>load-on-startup</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-mapping</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>DispatcherServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">></span></span>/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-mapping</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li></li>
+<li><pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>controller<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Controller<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestMapping<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//3.创建视图和容器</span>
+<span class="token comment" spellcheck="true">//4.使用注解配置</span>
+<span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"quick"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"save running"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">"success.jsp"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li></li>
+<li><pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>context</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/context<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+
+<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--5，组件扫描--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.example.controller<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Day06小案例总结"><a href="#Day06小案例总结" class="headerlink" title="Day06小案例总结"></a>Day06小案例总结</h1><h1 id="SpringMvc拦截器-interceptor"><a href="#SpringMvc拦截器-interceptor" class="headerlink" title="SpringMvc拦截器(interceptor)"></a>SpringMvc拦截器(interceptor)</h1><h4 id="一、作用"><a href="#一、作用" class="headerlink" title="一、作用"></a>一、作用</h4><ul>
+<li><p>类似于Servlet开发中的过滤器Filter,对处理器进行<strong>预处理</strong>（比如说解决乱码的问题）和<strong>后处理</strong>。</p>
+<ul>
+<li>可以被连成链子，即拦截器链，在访问<strong>被拦截的方法或者字段</strong>时会被顺序调用。</li>
+</ul>
+</li>
+<li><p>过滤器和拦截器的区别</p>
+<table>
+<thead>
+<tr>
+<th>区别</th>
+<th>过滤器</th>
+<th>拦截器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>使用范围</td>
+<td>servlet规范的一部分，任何web项目（Java）</td>
+<td>SpringMvc框架的工程</td>
+</tr>
+<tr>
+<td>拦截范围</td>
+<td>在url-pattern配置了/*之后，可以拦截所有要访问的资源</td>
+<td>&lt;mvc:mapping path=””&gt;配置拦截路径(/**排除所有)&lt;mvc:exclude-mapping path=””&gt;配置排除的路径</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>快速入门</p>
+<ul>
+<li>自定义拦截器<ol>
+<li>创建拦截器类实现HanderInterceptor接口</li>
+<li>配置拦截器spring-mvc.xml</li>
+<li>测试效果</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -550,7 +702,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/spring-spring-mvc-markdown-typoa/">
+                                    <span class="chip bg-color">spring,spring-mvc,markdown,typoa</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -779,6 +935,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/spring-spring-mvc-markdown-typoa/">
+                        <span class="chip bg-color">spring,spring-mvc,markdown,typoa</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1016,7 +1180,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">315</span>
+                        class="white-color">1.3k</span>
             
             
             
