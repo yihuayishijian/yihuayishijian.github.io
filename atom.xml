@@ -6,7 +6,7 @@
   <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://yihuayishijian.github.io/"/>
-  <updated>2021-11-09T10:58:21.304Z</updated>
+  <updated>2021-11-10T05:29:23.451Z</updated>
   <id>https://yihuayishijian.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>java动态代理</title>
+    <link href="https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/"/>
+    <id>https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/</id>
+    <published>2021-11-10T01:51:15.000Z</published>
+    <updated>2021-11-10T05:29:23.451Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;Java动态代理&quot;&gt;&lt;a href=&quot;#Java动态代理&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="-java" scheme="https://yihuayishijian.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spring笔记</title>
     <link href="https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/"/>
     <id>https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/</id>
     <published>2021-11-08T00:48:32.925Z</published>
-    <updated>2021-11-09T10:58:21.304Z</updated>
+    <updated>2021-11-10T05:29:08.206Z</updated>
     
     
       
@@ -48,7 +71,7 @@
     <link href="https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/"/>
     <id>https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/</id>
     <published>2021-11-08T00:47:49.000Z</published>
-    <updated>2021-11-09T10:35:57.419Z</updated>
+    <updated>2021-11-10T00:42:01.104Z</updated>
     
     
       
