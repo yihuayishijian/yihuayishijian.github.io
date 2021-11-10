@@ -472,14 +472,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.9k
+                    4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    18 分
                 </div>
                 
 
@@ -1232,15 +1232,51 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 <p><img src="C:\Users\86153\blog\themes\matery\source\medias\编程式事务管理.jpg"></p>
 </li>
 <li><p>TransactionDefinition 事务的定义信息对象</p>
-<p><img src="C:\Users\86153\blog\public\medias\事务定义对象.jpg"></p>
+<p>![](C:\Users\86153\blog\public\medias\事务定义对象 .jpg)</p>
 </li>
 <li><p>事务的隔离级别</p>
 <p>读未提交，读已提交，不可重复读，串行化          解决 脏读，不可重复读，和虚读（幻读）</p>
 </li>
-<li><p>事务的传播行为</p>
-<p>维护事务的相关参数</p>
+<li><p>事务的传播行为  维护事务的相关参数</p>
+</li>
+<li><p>TransactionStatus   提供事务的运行状态</p>
+<p><img src="C:\Users\86153\blog\public\medias\TransactionStatus.jpg"></p>
 </li>
 </ol>
+<h4 id="二、基于XML的声明式事务控制"><a href="#二、基于XML的声明式事务控制" class="headerlink" title="二、基于XML的声明式事务控制"></a>二、基于XML的声明式事务控制</h4><ul>
+<li>什么是声明式事务控制？<ul>
+<li>声明的方式控制事务，在配置文件中声明，用在Spring配置文件中声明式的处理事务来代替代码式的处理事务<ul>
+<li>解耦</li>
+<li>不需要事务管理的时候，修改一下配置文件就OK了，不用改代码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1867217766&amp;auto=1&amp;height=66"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 
             </div>
@@ -1994,6 +2030,60 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 
     <footer class="page-footer bg-color">
     
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="532226707"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
 
     <div class="container row center-align"
          style="margin-bottom: 15px !important;">
@@ -2008,7 +2098,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">4.6k</span>
+                        class="white-color">4.7k</span>
             
             
             
