@@ -6,7 +6,7 @@
   <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://yihuayishijian.github.io/"/>
-  <updated>2021-11-10T05:29:23.451Z</updated>
+  <updated>2021-11-15T10:40:02.859Z</updated>
   <id>https://yihuayishijian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSM整合（配置地狱啊（；´д｀）ゞ）</title>
+    <link href="https://yihuayishijian.github.io/2021/11/15/ssm-zheng-he-pei-zhi-di-yu-a-d/"/>
+    <id>https://yihuayishijian.github.io/2021/11/15/ssm-zheng-he-pei-zhi-di-yu-a-d/</id>
+    <published>2021-11-15T09:11:04.000Z</published>
+    <updated>2021-11-15T10:40:02.859Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SSM整合（配置地狱啊（；´д｀）ゞ）&quot;&gt;&lt;a href=&quot;#SSM整合（配置地狱啊（；´д｀）ゞ）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ssm java" scheme="https://yihuayishijian.github.io/tags/ssm-java/"/>
+    
+  </entry>
   
   <entry>
     <title>java动态代理</title>
@@ -44,7 +67,7 @@
     <link href="https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/"/>
     <id>https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/</id>
     <published>2021-11-08T00:48:32.925Z</published>
-    <updated>2021-11-12T11:06:17.375Z</updated>
+    <updated>2021-11-15T07:45:08.553Z</updated>
     
     
       
@@ -70,7 +93,7 @@
     <link href="https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/"/>
     <id>https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/</id>
     <published>2021-11-08T00:47:49.000Z</published>
-    <updated>2021-11-14T03:43:49.275Z</updated>
+    <updated>2021-11-15T10:48:20.515Z</updated>
     
     
       

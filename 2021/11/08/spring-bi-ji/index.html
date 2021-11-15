@@ -40,9 +40,9 @@ Spring的配置
     <script src="/libs/jquery/jquery.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="郭硕的第一个博客（HEXO）" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="郭硕的第一个博客（HEXO）" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -462,21 +462,21 @@ Spring的配置
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-12
+                    2021-11-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.3k
+                    8.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    40 分
+                    42 分
                 </div>
                 
 
@@ -2151,74 +2151,6 @@ select * from user
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IDuOL4"><img src="https://z3.ax1x.com/2021/11/12/IDuOL4.jpg" alt="IDuOL4.jpg"></a></p>
 </li>
 <li><p>一对多</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>domain<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> com<span class="token punctuation">.</span>mysql<span class="token punctuation">.</span>cj<span class="token punctuation">.</span>x<span class="token punctuation">.</span>protobuf<span class="token punctuation">.</span>MysqlxCrud<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Date<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>List<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">int</span> uid<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> String username<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//    private Date birthday;</span>
-<span class="token comment" spellcheck="true">//添加描述当前用户存在哪些订单</span>
-    <span class="token keyword">private</span> List<span class="token operator">&lt;</span>Orders<span class="token operator">></span> order<span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> List<span class="token operator">&lt;</span>Orders<span class="token operator">></span> <span class="token function">getOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> order<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setOrder</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>Orders<span class="token operator">></span> order<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>order <span class="token operator">=</span> order<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getUid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> uid<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUid</span><span class="token punctuation">(</span><span class="token keyword">int</span> uid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>uid <span class="token operator">=</span> uid<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">//</span>
-<span class="token comment" spellcheck="true">//    public Date getBirthday() {</span>
-<span class="token comment" spellcheck="true">//        return birthday;</span>
-<span class="token comment" spellcheck="true">//    }</span>
-<span class="token comment" spellcheck="true">//</span>
-<span class="token comment" spellcheck="true">//    public void setBirthday(Date birthday) {</span>
-<span class="token comment" spellcheck="true">//        this.birthday = birthday;</span>
-<span class="token comment" spellcheck="true">//    }</span>
-
-
-
-    <span class="token keyword">public</span> String <span class="token function">getUsername</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> username<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUsername</span><span class="token punctuation">(</span>String username<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>username <span class="token operator">=</span> username<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> String <span class="token function">getPassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> password<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPassword</span><span class="token punctuation">(</span>String password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>password <span class="token operator">=</span> password<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> String <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"User{"</span> <span class="token operator">+</span>
-                <span class="token string">"uid="</span> <span class="token operator">+</span> uid <span class="token operator">+</span>
-                <span class="token string">", username='"</span> <span class="token operator">+</span> username <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
-                <span class="token string">", password='"</span> <span class="token operator">+</span> password <span class="token operator">+</span> <span class="token string">'\''</span> <span class="token operator">+</span>
-                <span class="token string">", orderList="</span> <span class="token operator">+</span> order <span class="token operator">+</span>
-                <span class="token string">'}'</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
 <pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8" ?></span>
 <span class="token doctype">&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"></span>
 
@@ -2271,6 +2203,134 @@ select * from user
 </code></pre>
 </li>
 </ul>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Igl734"><img src="https://z3.ax1x.com/2021/11/15/Igl734.jpg" alt="Igl734.jpg"></a></p>
+<h4 id="Mybatis注解开发常用注解"><a href="#Mybatis注解开发常用注解" class="headerlink" title="Mybatis注解开发常用注解"></a>Mybatis注解开发常用注解</h4><h6 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h6><ul>
+<li><p>简单查询</p>
+<ol>
+<li><p>在核心配置文件sqlMapConfig.xml里面指定接口所在的包。</p>
+<pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--    指定接口所在的包--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>package</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.itheima.mapper<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>在接口上面添加注解</p>
+</li>
+</ol>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>mapper<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>domain<span class="token punctuation">.</span>User<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>ibatis<span class="token punctuation">.</span>annotations<span class="token punctuation">.</span>Delete<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>ibatis<span class="token punctuation">.</span>annotations<span class="token punctuation">.</span>Insert<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>ibatis<span class="token punctuation">.</span>annotations<span class="token punctuation">.</span>Select<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>ibatis<span class="token punctuation">.</span>annotations<span class="token punctuation">.</span>Update<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>List<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Insert</span><span class="token punctuation">(</span><span class="token string">"  insert into user values(null,#{username},#{password},null)"</span><span class="token punctuation">)</span>
+    <span class="token keyword">void</span> <span class="token function">save</span><span class="token punctuation">(</span>User user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Update</span><span class="token punctuation">(</span><span class="token string">" update user set username=#{username},password=#{password} where uid=#{uid}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span>User user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Delete</span><span class="token punctuation">(</span><span class="token string">" delete from user where uid=#{id}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">void</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token keyword">int</span> uid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">"select * from user where uid=#{id}"</span><span class="token punctuation">)</span>
+    User <span class="token function">findById</span><span class="token punctuation">(</span><span class="token keyword">int</span> uid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">"select * from user"</span><span class="token punctuation">)</span>
+    List<span class="token operator">&lt;</span>User<span class="token operator">></span> <span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>insert</p>
+</li>
+<li><p>update<strong>用update更新多个字段的时候一定要用逗号隔开，而不是AND，切忌粗心大意！！！</strong></p>
+</li>
+<li><p>delete</p>
+</li>
+<li><p>select   </p>
+</li>
+<li><p>复杂查询</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IgDc2n"><img src="https://z3.ax1x.com/2021/11/15/IgDc2n.jpg" alt="IgDc2n.jpg"></a></p>
+<h6 id="一对一"><a href="#一对一" class="headerlink" title="一对一"></a>一对一</h6><pre class=" language-xml"><code class="language-xml">@Select(" select * from orders o,user u where o.uid=u.uid")
+@Results(
+        {@Result(column = "id",property ="id"),
+                @Result(column ="ordertime",property ="orderTime" ),
+                @Result(column ="total",property = "total"),
+                @Result(
+                        javaType = User.class,// 要封装的实体类型
+                        property = "user",// 要封装的属性名称
+                        column = "uid", //根据哪个字段去封装user表的数据
+                        one = @One(select ="com.itheima.mapper.UserMapper.findById"  )// select属性，代表查询哪个接口的方法获得所要的对应的数据
+                ),
+
+        }
+)
+public List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Orders</span><span class="token punctuation">></span></span> findAll();
+</code></pre>
+<p>一对多</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>--UserMapper--</span><span class="token punctuation">></span></span>
+@Select("select * from user")
+@Results(
+        {
+                @Result(column = "uid",property = "uid"),
+                @Result(column = "username",property = "username"),
+                @Result(column = "password",property = "password"),
+                @Result(
+                        javaType = List.class,
+                        property = "ordersList",
+                        column = "uid",
+                        many = @Many(select = "com.itheima.mapper.OrderMapper.findOrderById")
+                )
+        }
+
+)
+public List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>User</span><span class="token punctuation">></span></span> findUserAndOrderAll();
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>--OrderMap--</span><span class="token punctuation">></span></span>
+     @Select("select * from orders where uid=#{uid}")
+@Results(
+        {
+                @Result(column = "id",property = "id",id = true),
+                @Result(column = "ordertime",property = "orderTime"),
+                @Result(column = "total",property = "total"),
+                @Result(column = "uid",property = "uid"),
+        }
+)
+    public List<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Orders</span><span class="token punctuation">></span></span> findOrderById(int uid);
+</code></pre>
+</li>
+<li><p>result    结果集封装</p>
+</li>
+<li><p>results  封装多个结果</p>
+</li>
+<li><p>one  一对一</p>
+</li>
+<li><p>many   一对多 </p>
+</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Select</span><span class="token punctuation">(</span><span class="token string">"select * from user"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Results</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Result</span><span class="token punctuation">(</span>id<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">,</span>column <span class="token operator">=</span> <span class="token string">"uid"</span><span class="token punctuation">,</span>property <span class="token operator">=</span> <span class="token string">"uid"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token annotation punctuation">@Result</span><span class="token punctuation">(</span>id<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">,</span>column <span class="token operator">=</span> <span class="token string">"username"</span><span class="token punctuation">,</span>property <span class="token operator">=</span> <span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token annotation punctuation">@Result</span><span class="token punctuation">(</span>id<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">,</span>column <span class="token operator">=</span> <span class="token string">"password"</span><span class="token punctuation">,</span>property <span class="token operator">=</span> <span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token annotation punctuation">@Result</span><span class="token punctuation">(</span>
+                property <span class="token operator">=</span> <span class="token string">"roleList"</span><span class="token punctuation">,</span>
+                column <span class="token operator">=</span> <span class="token string">"uid"</span><span class="token punctuation">,</span>
+                javaType <span class="token operator">=</span> List<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+                many <span class="token operator">=</span> <span class="token annotation punctuation">@Many</span><span class="token punctuation">(</span>select <span class="token operator">=</span> <span class="token string">"com.itheima.mapper.RoleMapper.findByUid"</span><span class="token punctuation">)</span>
+                <span class="token comment" spellcheck="true">//public interface RoleMapper{</span>
+                <span class="token comment" spellcheck="true">//    @Select("select * from sys_user_role ur,sys_role r where ur.roleId=r.id and ur.userId=#{id}")</span>
+                <span class="token comment" spellcheck="true">//    public List&lt;Role> findByUid(int uid);</span>
+                <span class="token comment" spellcheck="true">//        }</span>
+        <span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> List<span class="token operator">&lt;</span>User<span class="token operator">></span> <span class="token function">findUserAndRoleAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="SSM框架整合"><a href="#SSM框架整合" class="headerlink" title="SSM框架整合"></a>SSM框架整合</h4><ol>
+<li><p>准备工作</p>
+<p>mybatis–dao    spring-三层融合   spring-mvc–web层</p>
+</li>
+</ol>
 </li>
 </ul>
 </li>
@@ -2861,7 +2921,7 @@ select * from user
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            浮生日记( •̀ ω •́ )✧
                         
                     </div>
                     <div class="publish-info">
@@ -3038,7 +3098,7 @@ select * from user
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10.1k</span>
+                        class="white-color">11.7k</span>
             
             
             
