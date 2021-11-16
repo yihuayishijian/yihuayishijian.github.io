@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="浮生日记, HTML,CSS,JavaScript,Java,JavaWeb,Ssm等">
-    <meta name="description" content="浮生日记( •̀ ω •́ )✧密码是生日">
+    <meta name="description" content="浮生日记( •̀ ω •́ )✧">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -313,7 +313,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '60e767bf9e91ebd6a218381ea2bae09ddbfbf8ef63896e7fb7fc80ec6cc8b22e';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
