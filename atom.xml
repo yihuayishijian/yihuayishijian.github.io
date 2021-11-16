@@ -6,7 +6,7 @@
   <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://yihuayishijian.github.io/"/>
-  <updated>2021-11-15T10:40:02.859Z</updated>
+  <updated>2021-11-16T11:24:13.974Z</updated>
   <id>https://yihuayishijian.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring小结</title>
+    <link href="https://yihuayishijian.github.io/2021/11/16/spring-xiao-jie/"/>
+    <id>https://yihuayishijian.github.io/2021/11/16/spring-xiao-jie/</id>
+    <published>2021-11-16T11:17:34.000Z</published>
+    <updated>2021-11-16T11:24:13.974Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Spring" scheme="https://yihuayishijian.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git</title>
+    <link href="https://yihuayishijian.github.io/2021/11/16/git/"/>
+    <id>https://yihuayishijian.github.io/2021/11/16/git/</id>
+    <published>2021-11-16T00:47:07.000Z</published>
+    <updated>2021-11-16T11:25:21.790Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Git-分布式&quot;&gt;&lt;a href=&quot;#Git-分布式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+    <category term="Git" scheme="https://yihuayishijian.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>SSM整合（配置地狱啊（；´д｀）ゞ）</title>
@@ -44,7 +94,7 @@
     <link href="https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/"/>
     <id>https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/</id>
     <published>2021-11-10T01:51:15.000Z</published>
-    <updated>2021-11-10T05:29:23.451Z</updated>
+    <updated>2021-11-16T11:15:26.724Z</updated>
     
     
       
@@ -58,33 +108,7 @@
     
     
     
-    <category term="-java" scheme="https://yihuayishijian.github.io/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/"/>
-    <id>https://yihuayishijian.github.io/2021/11/08/spring-bi-ji/</id>
-    <published>2021-11-08T00:48:32.925Z</published>
-    <updated>2021-11-15T07:45:08.553Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;title: Spring笔记&lt;br&gt;date: 2021-11-08 08:48:32S&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Typora&lt;/li&gt;
-&lt;li&gt;Markdownpring&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe frameborder=&quot;no&quot;</summary>
-        
-      
-    
-    
-    
+    <category term="java" scheme="https://yihuayishijian.github.io/tags/java/"/>
     
   </entry>
   
@@ -93,7 +117,7 @@
     <link href="https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/"/>
     <id>https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/</id>
     <published>2021-11-08T00:47:49.000Z</published>
-    <updated>2021-11-15T10:48:20.515Z</updated>
+    <updated>2021-11-16T11:41:10.777Z</updated>
     
     
       

@@ -310,6 +310,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -1202,30 +1215,29 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/11/15/ssm-zheng-he-pei-zhi-di-yu-a-d/">
+                <a href="/2021/11/16/git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SSM整合（配置地狱啊（；´д｀）ゞ）">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="git">
                         
-                        <span class="card-title">SSM整合（配置地狱啊（；´д｀）ゞ）</span>
+                        <span class="card-title">git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SSM整合（配置地狱啊（；´д｀）ゞ）
+                            Git(不想复习spring的我跑来看看git)
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-15
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1234,12 +1246,19 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ssm-java/">
-                        <span class="chip bg-color">ssm java</span>
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
@@ -1265,7 +1284,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Java动态代理
                         
                     </div>
                     <div class="publish-info">
@@ -1284,7 +1303,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
                 <div class="card-action article-tags">
                     
                     <a href="/tags/java/">
-                        <span class="chip bg-color">-java</span>
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -1434,7 +1453,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">11.7k</span>
+                        class="white-color">12.4k</span>
             
             
             
