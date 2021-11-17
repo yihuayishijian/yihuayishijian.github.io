@@ -6,7 +6,7 @@
   <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://yihuayishijian.github.io/"/>
-  <updated>2021-11-16T11:24:13.974Z</updated>
+  <updated>2021-11-17T09:20:54.627Z</updated>
   <id>https://yihuayishijian.github.io/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring注解开发</title>
+    <link href="https://yihuayishijian.github.io/2021/11/17/spring-zhu-jie-kai-fa/"/>
+    <id>https://yihuayishijian.github.io/2021/11/17/spring-zhu-jie-kai-fa/</id>
+    <published>2021-11-17T02:49:37.000Z</published>
+    <updated>2021-11-17T09:20:54.627Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;h4 id=&quot;IOC控制反转，一种思想（Invocation-Of-Control）—–-gt-解耦&quot;&gt;&lt;a href=&quot;#IOC控制反转，一种思想（Invocation-Of-Control）—–-gt-解耦&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Spring注解开发" scheme="https://yihuayishijian.github.io/tags/Spring%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Java学习这回事</title>
+    <link href="https://yihuayishijian.github.io/2021/11/17/guan-yu-java-xue-xi-zhe-hui-shi/"/>
+    <id>https://yihuayishijian.github.io/2021/11/17/guan-yu-java-xue-xi-zhe-hui-shi/</id>
+    <published>2021-11-17T01:15:32.000Z</published>
+    <updated>2021-11-17T01:35:26.418Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;学习就是重复，看一遍会了不等于学会！！！！&quot;&gt;&lt;a href=&quot;#学习就是重复，看一遍会了不等于学会！！！！&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring小结</title>
@@ -117,7 +166,7 @@
     <link href="https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/"/>
     <id>https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/</id>
     <published>2021-11-08T00:47:49.000Z</published>
-    <updated>2021-11-16T12:17:30.053Z</updated>
+    <updated>2021-11-17T10:41:15.347Z</updated>
     
     
       
