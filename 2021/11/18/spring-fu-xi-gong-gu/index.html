@@ -5,13 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Spring复习巩固, HTML,CSS,JavaScript,Java,JavaWeb,Ssm等">
-    <meta name="description" content="
-
-Spring简介
-Spring是什么分层的Java SE/EE应用full-stack轻量级开源框架，以IOC（控制反转）和AOP（面向切面编程）为内核。
-
-Spring优势
-方便解耦，简化开发  将对象的创建权交给 Spring 容器">
+    <meta name="description" content="Spring复习巩固">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -503,6 +497,14 @@ Spring优势
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Typora/">
+                                <span class="chip bg-color">Typora</span>
+                            </a>
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
                             <a href="/tags/Spring/">
                                 <span class="chip bg-color">Spring</span>
                             </a>
@@ -533,14 +535,14 @@ Spring优势
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -562,7 +564,7 @@ Spring优势
             <div id="articleContent">
                 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&amp;id=1842865092&amp;auto=1&amp;height=66"></iframe>
 
-<h4 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h4><ol>
+<h4 id="一、Spring简介"><a href="#一、Spring简介" class="headerlink" title="一、Spring简介"></a>一、Spring简介</h4><ol>
 <li><h5 id="Spring是什么"><a href="#Spring是什么" class="headerlink" title="Spring是什么"></a>Spring是什么</h5><p>分层的Java SE/EE应用full-stack轻量级开源框架，以<strong>IOC</strong>（控制反转）和<strong>AOP</strong>（面向切面编程）为内核。</p>
 </li>
 <li><h5 id="Spring优势"><a href="#Spring优势" class="headerlink" title="Spring优势"></a>Spring优势</h5><ul>
@@ -883,13 +885,13 @@ Spring优势
 </ol>
 </li>
 </ol>
-<h4 id="Spring配置数据源-连接池"><a href="#Spring配置数据源-连接池" class="headerlink" title="Spring配置数据源(连接池)"></a>Spring配置数据源(连接池)</h4><h5 id="1-1连接池的作用"><a href="#1-1连接池的作用" class="headerlink" title="1.1连接池的作用"></a>1.1连接池的作用</h5><ul>
+<h4 id="二、Spring配置数据源-连接池"><a href="#二、Spring配置数据源-连接池" class="headerlink" title="二、Spring配置数据源(连接池)"></a>二、Spring配置数据源(连接池)</h4><h5 id="2-1-连接池的作用"><a href="#2-1-连接池的作用" class="headerlink" title="2.1 连接池的作用"></a>2.1 连接池的作用</h5><ul>
 <li>提高程序性能</li>
 <li>事先实例化数据源,初始化部分连接资源</li>
 <li>使用连接资源时从数据源获取</li>
 <li>使用完毕归还数据源</li>
 </ul>
-<h5 id="1-2数据源开发步骤"><a href="#1-2数据源开发步骤" class="headerlink" title="1.2数据源开发步骤"></a>1.2数据源开发步骤</h5><h6 id="导入坐标-数据源和数据库驱动"><a href="#导入坐标-数据源和数据库驱动" class="headerlink" title="导入坐标(数据源和数据库驱动)"></a>导入坐标(数据源和数据库驱动)</h6><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+<h5 id="2-2-数据源开发步骤-amp-amp-抽取配置文件"><a href="#2-2-数据源开发步骤-amp-amp-抽取配置文件" class="headerlink" title="2.2 数据源开发步骤&amp;&amp;抽取配置文件"></a>2.2 数据源开发步骤&amp;&amp;抽取配置文件</h5><h6 id="导入坐标-数据源和数据库驱动"><a href="#导入坐标-数据源和数据库驱动" class="headerlink" title="导入坐标(数据源和数据库驱动)"></a>导入坐标(数据源和数据库驱动)</h6><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
 <span class="token comment" spellcheck="true">&lt;!--spring数据源--></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
@@ -950,17 +952,74 @@ Spring优势
         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>connection<span class="token punctuation">)</span><span class="token punctuation">;</span>
         connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//手动创建c3p0数据源(加载properties配置文件)</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test03</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> PropertyVetoException<span class="token punctuation">,</span> SQLException <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//读取配置文件getBundle("基名专门读取properties文件，不用后缀")</span>
+        ResourceBundle properties <span class="token operator">=</span> ResourceBundle<span class="token punctuation">.</span><span class="token function">getBundle</span><span class="token punctuation">(</span><span class="token string">"jdbc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String driver <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String url <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.url"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String username <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String password <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ComboPooledDataSource dataSource<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ComboPooledDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setDriverClass</span><span class="token punctuation">(</span>driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setJdbcUrl</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setUser</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//获取资源</span>
+        Connection connection <span class="token operator">=</span> dataSource<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>connection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//手动创建druid数据源(加载properties配置文件)</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test04</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> PropertyVetoException<span class="token punctuation">,</span> SQLException <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//读取配置文件getBundle("基名专门读取properties文件，不用后缀")</span>
+        ResourceBundle properties <span class="token operator">=</span> ResourceBundle<span class="token punctuation">.</span><span class="token function">getBundle</span><span class="token punctuation">(</span><span class="token string">"jdbc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String driver <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String url <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.url"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String username <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String password <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"jdbc.password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        DruidDataSource dataSource<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">DruidDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setDriverClassName</span><span class="token punctuation">(</span>driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setUrl</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//获取资源</span>
+        Connection connection <span class="token operator">=</span> dataSource<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>connection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="1-3sadjks"><a href="#1-3sadjks" class="headerlink" title="1.3sadjks"></a>1.3sadjks</h5><h4 id="v是v豆瓣"><a href="#v是v豆瓣" class="headerlink" title="v是v豆瓣"></a>v是v豆瓣</h4><h4 id="就爱看部分就卡死吧"><a href="#就爱看部分就卡死吧" class="headerlink" title="就爱看部分就卡死吧"></a>就爱看部分就卡死吧</h4><h4 id="附件是妇女精神科大夫那就"><a href="#附件是妇女精神科大夫那就" class="headerlink" title="附件是妇女精神科大夫那就"></a>附件是妇女精神科大夫那就</h4><h4 id="工会副本就看到"><a href="#工会副本就看到" class="headerlink" title="工会副本就看到"></a>工会副本就看到</h4><h4 id="会把发红包"><a href="#会把发红包" class="headerlink" title="会把发红包"></a>会把发红包</h4><ol>
-<li><h5 id=""><a href="#" class="headerlink" title=""></a></h5><ol>
-<li><ol>
-<li></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-
+<h5 id="1-3-Spring配置数据源—在applicationContext-xml中加载jdbc-properties配置文件"><a href="#1-3-Spring配置数据源—在applicationContext-xml中加载jdbc-properties配置文件" class="headerlink" title="1.3 Spring配置数据源—在applicationContext.xml中加载jdbc.properties配置文件"></a>1.3 Spring配置数据源—在applicationContext.xml中加载jdbc.properties配置文件</h5><h6 id="在applicationContext-xml中引入context命名空间和约束路径"><a href="#在applicationContext-xml中引入context命名空间和约束路径" class="headerlink" title="在applicationContext.xml中引入context命名空间和约束路径"></a>在applicationContext.xml中引入context命名空间和约束路径</h6><p>加载properties的标签不在bean的命名空间下，在context空间下</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>context</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/context<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+       <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>property-placeholder</span> <span class="token attr-name">location</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>classpath:jdbc.properties<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.mchange.v2.c3p0.ComboPooledDataSource<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dataSource<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>driverClass<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${jdbc.driver}<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jdbcUrl<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${jdbc.url}<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${jdbc.username}<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${jdbc.password}<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//在applicationContext.xml中加载jdbc.properties配置文件</span>
+<span class="token annotation punctuation">@Test</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test05</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> PropertyVetoException<span class="token punctuation">,</span> SQLException <span class="token punctuation">{</span>
+    ApplicationContext app<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ClassPathXmlApplicationContext</span><span class="token punctuation">(</span><span class="token string">"applicationContext.xml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ComboPooledDataSource dataSource <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>ComboPooledDataSource<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Connection connection <span class="token operator">=</span> dataSource<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>connection<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="三、Spring注解开发"><a href="#三、Spring注解开发" class="headerlink" title="三、Spring注解开发"></a>三、Spring注解开发</h4><h5 id="3-1-Spring原始注解"><a href="#3-1-Spring原始注解" class="headerlink" title="3.1 Spring原始注解"></a>3.1 Spring原始注解</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ITMVsK"><img src="https://z3.ax1x.com/2021/11/18/ITMVsK.jpg" alt="ITMVsK.jpg"></a></p>
+<p> <a target="_blank" rel="noopener" href="https://imgtu.com/i/IT8MvR"><img src="https://z3.ax1x.com/2021/11/18/IT8MvR.jpg" alt="IT8MvR.jpg"></a></p>
+<h5 id="3-2-Spring新注解"><a href="#3-2-Spring新注解" class="headerlink" title="3.2 Spring新注解"></a>3.2 Spring新注解</h5><h4 id="Spring整合junit"><a href="#Spring整合junit" class="headerlink" title="Spring整合junit"></a>Spring整合junit</h4><h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><h4 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h4><h4 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h4>
                 
             </div>
             <hr/>
@@ -1023,6 +1082,14 @@ Spring优势
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
+                            
+                                <a href="/tags/Typora/">
+                                    <span class="chip bg-color">Typora</span>
+                                </a>
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
                             
                                 <a href="/tags/Spring/">
                                     <span class="chip bg-color">Spring</span>
@@ -1506,7 +1573,7 @@ Spring优势
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Spring复习巩固
                         
                     </div>
                     <div class="publish-info">
@@ -1524,6 +1591,14 @@ Spring优势
 
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typora/">
+                        <span class="chip bg-color">Typora</span>
+                    </a>
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
                     
                     <a href="/tags/Spring/">
                         <span class="chip bg-color">Spring</span>
@@ -1721,7 +1796,7 @@ Spring优势
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.4k</span>
+                        class="white-color">15.9k</span>
             
             
             
