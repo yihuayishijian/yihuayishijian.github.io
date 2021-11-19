@@ -528,21 +528,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-18
+                    2021-11-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    19 分
                 </div>
                 
 
@@ -991,7 +991,7 @@
         connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 </code></pre>
-<h5 id="1-3-Spring配置数据源—在applicationContext-xml中加载jdbc-properties配置文件"><a href="#1-3-Spring配置数据源—在applicationContext-xml中加载jdbc-properties配置文件" class="headerlink" title="1.3 Spring配置数据源—在applicationContext.xml中加载jdbc.properties配置文件"></a>1.3 Spring配置数据源—在applicationContext.xml中加载jdbc.properties配置文件</h5><h6 id="在applicationContext-xml中引入context命名空间和约束路径"><a href="#在applicationContext-xml中引入context命名空间和约束路径" class="headerlink" title="在applicationContext.xml中引入context命名空间和约束路径"></a>在applicationContext.xml中引入context命名空间和约束路径</h6><p>加载properties的标签不在bean的命名空间下，在context空间下</p>
+<h5 id="1-3-📝Spring配置数据源—在applicationContext-xml中加载jdbc-properties配置文件"><a href="#1-3-📝Spring配置数据源—在applicationContext-xml中加载jdbc-properties配置文件" class="headerlink" title="1.3 📝Spring配置数据源—在applicationContext.xml中加载jdbc.properties配置文件"></a>1.3 📝Spring配置数据源—在applicationContext.xml中加载jdbc.properties配置文件</h5><h6 id="在applicationContext-xml中引入context命名空间和约束路径"><a href="#在applicationContext-xml中引入context命名空间和约束路径" class="headerlink" title="在applicationContext.xml中引入context命名空间和约束路径"></a>在applicationContext.xml中引入context命名空间和约束路径</h6><p>加载properties的标签不在bean的命名空间下，在context空间下</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
        <span class="token attr-name"><span class="token namespace">xmlns:</span>context</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/context<span class="token punctuation">"</span></span>
@@ -1017,9 +1017,318 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     connection<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="三、Spring注解开发"><a href="#三、Spring注解开发" class="headerlink" title="三、Spring注解开发"></a>三、Spring注解开发</h4><h5 id="3-1-Spring原始注解"><a href="#3-1-Spring原始注解" class="headerlink" title="3.1 Spring原始注解"></a>3.1 Spring原始注解</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ITMVsK"><img src="https://z3.ax1x.com/2021/11/18/ITMVsK.jpg" alt="ITMVsK.jpg"></a></p>
+<h4 id="三、Spring注解开发"><a href="#三、Spring注解开发" class="headerlink" title="三、Spring注解开发"></a>三、Spring注解开发</h4><h5 id="3-1📝-Spring原始注解"><a href="#3-1📝-Spring原始注解" class="headerlink" title="3.1📝 Spring原始注解"></a>3.1📝 Spring原始注解</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ITMVsK"><img src="https://z3.ax1x.com/2021/11/18/ITMVsK.jpg" alt="ITMVsK.jpg"></a></p>
 <p> <a target="_blank" rel="noopener" href="https://imgtu.com/i/IT8MvR"><img src="https://z3.ax1x.com/2021/11/18/IT8MvR.jpg" alt="IT8MvR.jpg"></a></p>
-<h5 id="3-2-Spring新注解"><a href="#3-2-Spring新注解" class="headerlink" title="3.2 Spring新注解"></a>3.2 Spring新注解</h5><h4 id="Spring整合junit"><a href="#Spring整合junit" class="headerlink" title="Spring整合junit"></a>Spring整合junit</h4><h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><h4 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h4><h4 id="标题-2"><a href="#标题-2" class="headerlink" title="标题"></a>标题</h4>
+<p>注解开发的时候，使用@Autowired+@Qualifier(“dao”),后面的变量不用给其设置set方法</p>
+<p><strong>@Autowired</strong>//按照数据类型从Spring容器中进行匹配，只有一个同类型的对象好用</p>
+<p> <strong>@Qualifier(“dao”)</strong>//<strong>按照id名称</strong>从容器匹配， @Qualifier(“dao”)要结合@Autowired一起使用</p>
+<p>@<strong>Resource(name = “dao”)</strong>//<strong>按照id名称，</strong>相当于@Qualifier(“dao”)+@Autowired</p>
+<p><strong>@Scope</strong>：控制单例还是多例</p>
+<p><strong>@PostConstruct</strong>：标注初始化的方法 </p>
+<p><strong>@PreDestroy</strong>：标注销毁方法</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>service<span class="token punctuation">.</span>impl<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>dao<span class="token punctuation">.</span>UserDao<span class="token punctuation">;</span>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>service<span class="token punctuation">.</span>UserService<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Value<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Service<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>PostConstruct<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>PreDestroy<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Resource<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//&lt;!--    &lt;bean name="service" class="com.itheima.service.impl.UserServiceImpl" p:userDao-ref="dao"/>--></span>
+<span class="token comment" spellcheck="true">///></span>
+<span class="token comment" spellcheck="true">//@Component("service")</span>
+<span class="token annotation punctuation">@Service</span><span class="token punctuation">(</span><span class="token string">"service"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">UserService</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${jdbc.driver}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String driver<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//    p:userDao-ref="dao"</span>
+<span class="token comment" spellcheck="true">//    @Autowired</span>
+<span class="token comment" spellcheck="true">//    @Qualifier("dao")</span>
+    <span class="token annotation punctuation">@Resource</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"dao"</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> UserDao userDao<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//    public void setUserDao(UserDaoImpl userDao) {</span>
+<span class="token comment" spellcheck="true">//        this.userDao = userDao;</span>
+<span class="token comment" spellcheck="true">//    }</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        userDao<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@PostConstruct</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"service对象的初始化方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@PreDestroy</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">destory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"sevice对象销毁"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h5 id="3-2-Spring新注解"><a href="#3-2-Spring新注解" class="headerlink" title="3.2 Spring新注解"></a>3.2 Spring新注解</h5><p>旧的注解不能全部的替代掉xml配置，对于那些<strong>非自定义的bean****、</strong>加载properties文件<strong>、</strong>组件扫描，引入其他xml文件****束手无策，</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/I7gO29"><img src="https://z3.ax1x.com/2021/11/19/I7gO29.jpg" alt="I7gO29.jpg"></a> </p>
+<p>//&lt;context:property-placeholder location=”classpath:jdbc.properties”/&gt;<br><strong>@PropertySource</strong>(“classpath:jdbc.properties”)</p>
+<p> <strong>@Bean(“dataSource”)</strong>//spring会将当前方法返回值以指定名称存储到容器</p>
+<p><strong>@Configuration</strong>//标志该类是spring的核心配置类</p>
+<p><strong>@Import({DataSourceConfiguration.class})</strong>//加载分配置文件</p>
+<p>//&lt;context:component-scan base-package=”com.itheima”/&gt;<br>**@ComponentScan(basePackages = “com.itheima”)**组件扫描（注解开发的必备）</p>
+<p>核心配置类</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>config<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>ComponentScan<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Configuration<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Import<span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@Configuration</span><span class="token comment" spellcheck="true">//标志该类是spring的核心配置类</span>
+<span class="token comment" spellcheck="true">//&lt;context:component-scan base-package="com.itheima"/></span>
+<span class="token annotation punctuation">@ComponentScan</span><span class="token punctuation">(</span>basePackages <span class="token operator">=</span> <span class="token string">"com.itheima"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Import</span><span class="token punctuation">(</span><span class="token punctuation">{</span>DataSourceConfiguration<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//加载分配置文件</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringConfigure</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+</code></pre>
+<p>数据源配置类（分）</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>config<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>alibaba<span class="token punctuation">.</span>druid<span class="token punctuation">.</span>pool<span class="token punctuation">.</span>DruidDataSource<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>beans<span class="token punctuation">.</span>factory<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Value<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>Bean<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>PropertySource<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>sql<span class="token punctuation">.</span>DataSource<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//&lt;context:property-placeholder location="classpath:jdbc.properties"/></span>
+<span class="token annotation punctuation">@PropertySource</span><span class="token punctuation">(</span><span class="token string">"classpath:jdbc.properties"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DataSourceConfiguration</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//在@Value里面可以像在xml配置文件里一样使用el表达式获取Spring容器里面的的文件内容</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${jdbc.driver}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String driver<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${jdbc.url}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String url<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${jdbc.username}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String username<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${jdbc.password}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String password<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Bean</span><span class="token punctuation">(</span><span class="token string">"dataSource"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//spring会将当前方法返回值以指定名称存储到容器</span>
+    <span class="token keyword">public</span> DataSource <span class="token function">getDatasource</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        DruidDataSource dataSource <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DruidDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setDriverClassName</span><span class="token punctuation">(</span>driver<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setUrl</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dataSource<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> dataSource<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="四、Spring整合junit"><a href="#四、Spring整合junit" class="headerlink" title="四、Spring整合junit"></a>四、Spring整合junit</h4><h5 id="4-1-原始Junit测试的问题"><a href="#4-1-原始Junit测试的问题" class="headerlink" title="4.1 原始Junit测试的问题"></a>4.1 原始Junit测试的问题</h5><p>这俩行代码不可以轻易的删掉</p>
+<pre class=" language-java"><code class="language-java">ApplicationContext app<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ClassPathXmlApplicationContext</span><span class="token punctuation">(</span><span class="token string">"applicationContext.xml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ComboPooledDataSource dataSource <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>ComboPooledDataSource<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h5 id="4-2-解决方案"><a href="#4-2-解决方案" class="headerlink" title="4.2 解决方案"></a>4.2 解决方案</h5><ul>
+<li>让SpringJunit负责创建 Spring容器，将配置文件名称告诉他</li>
+<li>将需要测试的Bean直接注入</li>
+</ul>
+<h5 id="4-3开发步骤"><a href="#4-3开发步骤" class="headerlink" title="4.3开发步骤"></a>4.3开发步骤</h5><ul>
+<li><p>导入坐标(spring集成junit)<strong>spring-test+junit</strong></p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--        导入spring集成Junit的包--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.0.5.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!--        junit--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>4.12<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>使用@Runwith注解去替代原来的运行期</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RunWith</span><span class="token punctuation">(</span>SpringJUnit4ClassRunner<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>使用@ContextConfiguration指定配置文件或者配置类</p>
+</li>
+<li><p>使用@Autowired注入需要测试的对象</p>
+</li>
+<li><p>创建测试方法进行测试</p>
+</li>
+</ul>
+<p><strong>指定配置文件</strong></p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//需要在原来的配置文件里面加上这些</span>
+<span class="token comment" spellcheck="true">//&lt;bean class="com.itheima.dao.impl.UserDaoImpl" id="userDao"/></span>
+  <span class="token comment" spellcheck="true">//  &lt;bean name="userService" class="com.itheima.service.impl.UserServiceImpl" //p:userDao-ref="userDao"></span>
+  <span class="token comment" spellcheck="true">//  &lt;/bean></span>
+<span class="token annotation punctuation">@RunWith</span><span class="token punctuation">(</span>SpringJUnit4ClassRunner<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ContextConfiguration</span><span class="token punctuation">(</span><span class="token string">"classpath:applicationContext.xml"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//@ContextConfiguration(classes = SpringConfigure.class)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringJunitTest</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> UserService userService<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> DruidDataSource dataSource<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserService</span><span class="token punctuation">(</span>UserService userService<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>userService <span class="token operator">=</span> userService<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
+        userService<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>dataSource<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>指定配置类</strong></p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RunWith</span><span class="token punctuation">(</span>SpringJUnit4ClassRunner<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//@ContextConfiguration("classpath:applicationContext.xml")</span>
+<span class="token annotation punctuation">@ContextConfiguration</span><span class="token punctuation">(</span>classes <span class="token operator">=</span> SpringConfigure<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SpringJunitTest</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> UserService userService<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> DataSource dataSource<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test01</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> SQLException <span class="token punctuation">{</span>
+        userService<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>dataSource<span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="五、Spring集成WEB环境"><a href="#五、Spring集成WEB环境" class="headerlink" title="五、Spring集成WEB环境"></a>五、Spring集成WEB环境</h4><h5 id="5-1环境搭建"><a href="#5-1环境搭建" class="headerlink" title="5.1环境搭建"></a>5.1环境搭建</h5><p>JavaEE项目+servlet支持+三层架构+在web.xml里面配置servlet</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>userServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-class</span><span class="token punctuation">></span></span>com.itheima.controller.UserServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-class</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-mapping</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>userServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">></span></span>/userServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-mapping</span><span class="token punctuation">></span></span>
+</code></pre>
+<h5 id="5-2-弊端和解决（白学，，仅仅是个例子，有封装）"><a href="#5-2-弊端和解决（白学，，仅仅是个例子，有封装）" class="headerlink" title="5.2 弊端和解决（白学，，仅仅是个例子，有封装）"></a>5.2 弊端和解决（白学，，仅仅是个例子，有封装）</h5><pre class=" language-java"><code class="language-java">ApplicationContext app<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ClassPathXmlApplicationContext</span><span class="token punctuation">(</span><span class="token string">"applicationContext.xml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+UserService userService <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>UserService<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>用一次创建一次，配置文件加载多次，ApplicationContext的对象创建多次</strong></p>
+<p>解决：在Web项目中，使用<strong>ServletContextListener</strong>监听Web应用的启动，一启动就加载Spring的配置文件，创建<strong>ApplicationContext的对象</strong>，将其存储到最大的域<strong>servletContext域</strong>中，这样就可以在任意位置从域中获取ApplicationContext的对象了</p>
+<ul>
+<li><p>编写监听器 一个继承了<strong>ServletContextListener</strong>的类</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>listener<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>service<span class="token punctuation">.</span>UserService<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>ApplicationContext<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>support<span class="token punctuation">.</span>ClassPathXmlApplicationContext<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ServletContext<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ServletContextEvent<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ServletContextListener<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ContextLoaderListener</span> <span class="token keyword">implements</span> <span class="token class-name">ServletContextListener</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">contextInitialized</span><span class="token punctuation">(</span>ServletContextEvent sce<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//获取应用上下文对象</span>
+        ApplicationContext app<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ClassPathXmlApplicationContext</span><span class="token punctuation">(</span><span class="token string">"applicationContext.xml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//将Spring的应用上下文对象存储到servletContext中</span>
+        ServletContext servletContext <span class="token operator">=</span> sce<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        servletContext<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"app"</span><span class="token punctuation">,</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">contextDestroyed</span><span class="token punctuation">(</span>ServletContextEvent sce<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ServletContextListener<span class="token punctuation">.</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">contextDestroyed</span><span class="token punctuation">(</span>sce<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>配置监听器  web.xml中</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--    配置监听器--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listener</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listener-class</span><span class="token punctuation">></span></span>com.itheima.listener.ContextLoaderListener<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>listener-class</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>listener</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>在servlet里面获取对象即可</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>controller<span class="token punctuation">;</span>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>service<span class="token punctuation">.</span>UserService<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>ApplicationContext<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ServletContext<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ServletException<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServlet<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletRequest<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletResponse<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>IOException<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span>HttpServletRequest req<span class="token punctuation">,</span> HttpServletResponse resp<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException<span class="token punctuation">,</span> IOException <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//ServletContext servletContext1 = this.getServletContext();</span>
+        ServletContext servletContext <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ApplicationContext  app <span class="token operator">=</span> <span class="token punctuation">(</span>ApplicationContext<span class="token punctuation">)</span>                                         servletContext<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        UserService userService <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>UserService<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        userService<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+<li><p>优化</p>
+<ul>
+<li><p>将监听器中获取配置文件  的文件名字解耦  在web.xml里面配置</p>
+<p>//获取应用上下文对象</p>
+<pre><code>  ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
+</code></pre>
+</li>
+</ul>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--    全局初始化参数--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>context-param</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-name</span><span class="token punctuation">></span></span>contextConfigureLocation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-name</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-value</span><span class="token punctuation">></span></span>applicationContext.xml<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>context-param</span><span class="token punctuation">></span></span>
+</code></pre>
+<ul>
+<li>在web层获取对象需要知道属性名字  servletContext.getAttribute(“app”);</li>
+</ul>
+<p>创建一个工具类，直接返回ApplicationContext对象</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>listener<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>ApplicationContext<span class="token punctuation">;</span>
+<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>context<span class="token punctuation">.</span>support<span class="token punctuation">.</span>ClassPathXmlApplicationContext<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ServletContext<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WebApplicationUtils</span> <span class="token punctuation">{</span>
+        <span class="token keyword">public</span> <span class="token keyword">static</span> ApplicationContext <span class="token function">getWebApplicationContext</span><span class="token punctuation">(</span>ServletContext servletContext<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token keyword">return</span> <span class="token punctuation">(</span>ApplicationContext<span class="token punctuation">)</span> servletContext<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ul>
+<h5 id="5-3-Spring提供的获取应用上下文的工具"><a href="#5-3-Spring提供的获取应用上下文的工具" class="headerlink" title="5.3 Spring提供的获取应用上下文的工具"></a>5.3 Spring提供的获取应用上下文的工具</h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IHxCq0"><img src="https://z3.ax1x.com/2021/11/19/IHxCq0.jpg" alt="IHxCq0.jpg"></a></p>
+<ul>
+<li><p>导入坐标 <strong>pom.xml</strong></p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--        监听器--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.0.5.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>配置监听器   <strong>web.xml</strong></p>
+<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--    全局初始化参数--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>context-param</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-name</span><span class="token punctuation">></span></span>contextConfigLocation<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-name</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>param-value</span><span class="token punctuation">></span></span>classpath:applicationContext.xml<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>param-value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>context-param</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--    配置监听器--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listener</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listener-class</span><span class="token punctuation">></span></span>org.springframework.web.context.ContextLoaderListener<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>listener-class</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>listener</span><span class="token punctuation">></span></span>
+</code></pre>
+</li>
+<li><p>使用</p>
+</li>
+</ul>
+<h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><h4 id="标题-1"><a href="#标题-1" class="headerlink" title="标题"></a>标题</h4>
                 
             </div>
             <hr/>
@@ -1796,7 +2105,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.9k</span>
+                        class="white-color">17.6k</span>
             
             
             

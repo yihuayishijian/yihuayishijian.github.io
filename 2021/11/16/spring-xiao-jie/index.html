@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring小结, HTML,CSS,JavaScript,Java,JavaWeb,Ssm等">
-    <meta name="description" content="Spring小结">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Java,JavaWeb,Ssm等">
+    <meta name="description" content="
+
+Spring的配置
+在pom.xml里面导入坐标
+    &amp;lt;dependencies&gt;
+&amp;lt;!--spring数据源--&gt;
+        &amp;lt;dependency&gt;
+            &amp;lt;groupId&gt;org">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring小结 | 郭硕的第一个博客（HEXO）</title>
+    <title>郭硕的第一个博客（HEXO）</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -376,12 +383,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring小结</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -495,13 +502,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Spring/">
-                                <span class="chip bg-color">Spring</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -520,21 +523,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-16
+                    2021-11-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.6k
+                    8.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    42 分
+                    43 分
                 </div>
                 
 
@@ -558,12 +561,44 @@
 
 <h1 id="Spring的配置"><a href="#Spring的配置" class="headerlink" title="Spring的配置"></a>Spring的配置</h1><ol>
 <li><p>在pom.xml里面导入坐标</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--        A导入spring的坐标--></span>
+<pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--spring数据源--></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-context<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.0.5.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- 数据驱动--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>mysql<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mysql-connector-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>8.0.12<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--        数据源--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>c3p0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>c3p0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>0.9.1.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>druid<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.1.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--        导入spring集成Junit的包--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.0.5.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!--        junit--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>junit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>4.12<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
 </code></pre>
 </li>
 <li><p>创建dao及其实现</p>
@@ -583,6 +618,7 @@
 <h1 id="Spring-Mvc"><a href="#Spring-Mvc" class="headerlink" title="Spring-Mvc"></a>Spring-Mvc</h1><h4 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h4><ul>
 <li><p>MVC（module,view,controller）</p>
 <p>客户端–&gt;Tomcat服务器（Tomcat引擎（接收客户端请求，封装res和req，调用请求资源）+web应用（Spring-Mvc代替servlet执行共有的行为）+POJO特有行为）</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IbVj0g"><img src="https://z3.ax1x.com/2021/11/19/IbVj0g.png" alt="IbVj0g.png"></a></p>
 <h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><ol>
 <li><p>导入spring—mvc包</p>
 </li>
@@ -593,41 +629,41 @@
 <li><p>通过注解的方式将Controller配置到Spring容器当中@Component/@Controller</p>
 </li>
 <li><p>配置spring-mvc.xml配置文件（配置组件扫描）</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
-       <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
-       <span class="token attr-name"><span class="token namespace">xmlns:</span>mvc</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/mvc<span class="token punctuation">"</span></span>
-       <span class="token attr-name"><span class="token namespace">xmlns:</span>context</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/context<span class="token punctuation">"</span></span>
-       <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-
-    <span class="token comment" spellcheck="true">&lt;!--1、mvc注解驱动--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">mvc:</span>annotation-driven</span><span class="token punctuation">/></span></span>
-
-    <span class="token comment" spellcheck="true">&lt;!--2、配置视图解析器--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>org.springframework.web.servlet.view.InternalResourceViewResolver<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>prefix<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>suffix<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>.jsp<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
-
-    <span class="token comment" spellcheck="true">&lt;!--3、静态资源权限开放--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">mvc:</span>default-servlet-handler</span><span class="token punctuation">/></span></span>
-
-    <span class="token comment" spellcheck="true">&lt;!--4、组件扫描  扫描Controller--></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.itheima.controller<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
-
-<span class="token comment" spellcheck="true">&lt;!----></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span>
+<p>```xml</p>
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<p>&lt;beans xmlns=”<a target="_blank" rel="noopener" href="http://www.springframework.org/schema/beans&quot;">http://www.springframework.org/schema/beans"</a></p>
+<pre><code>   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="
+   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 </code></pre>
-</li>
-<li><p>执行访问测试</p>
-</li>
+<p>“&gt;</p>
+<pre><code>&lt;!--1、mvc注解驱动--&gt;
+&lt;mvc:annotation-driven/&gt;
+
+&lt;!--2、配置视图解析器--&gt;
+&lt;bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;
+    &lt;property name="prefix" value="/"/&gt;
+    &lt;property name="suffix" value=".jsp"/&gt;
+&lt;/bean&gt;
+
+&lt;!--3、静态资源权限开放--&gt;
+&lt;mvc:default-servlet-handler/&gt;
+
+&lt;!--4、组件扫描  扫描Controller--&gt;
+&lt;context:component-scan base-package="com.itheima.controller"/&gt;
+</code></pre>
+<!----></li>
 </ol>
-<p><img src="C:\Users\86153\AppData\Roaming\Typora\typora-user-images\image-20211109094040984.png" alt="image-20211109094040984"></p>
+ 
+   ```
+
+<ol start="6">
+<li>执行访问测试</li>
+</ol>
 <ul>
 <li><p>开发配置</p>
 <ol>
@@ -698,7 +734,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </ul>
 </li>
 </ul>
-<h1 id="Day06小案例总结"><a href="#Day06小案例总结" class="headerlink" title="Day06小案例总结"></a>Day06小案例总结</h1><h1 id="SpringMvc拦截器-interceptor"><a href="#SpringMvc拦截器-interceptor" class="headerlink" title="SpringMvc拦截器(interceptor)"></a>SpringMvc拦截器(interceptor)</h1><h4 id="一、作用"><a href="#一、作用" class="headerlink" title="一、作用"></a>一、作用</h4><ul>
+<h1 id="SpringMvc拦截器-interceptor"><a href="#SpringMvc拦截器-interceptor" class="headerlink" title="SpringMvc拦截器(interceptor)"></a>SpringMvc拦截器(interceptor)</h1><h4 id="一、作用"><a href="#一、作用" class="headerlink" title="一、作用"></a>一、作用</h4><ul>
 <li><p>类似于Servlet开发中的过滤器Filter,对处理器进行<strong>预处理</strong>（比如说解决乱码的问题）和<strong>后处理</strong>。</p>
 <ul>
 <li>可以被连成链子，即拦截器链，在访问<strong>被拦截的方法或者字段</strong>时会被顺序调用。</li>
@@ -898,30 +934,19 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h1 id="Aop-Aspect-Oriented-Programming"><a href="#Aop-Aspect-Oriented-Programming" class="headerlink" title="Aop(Aspect Oriented Programming)"></a>Aop(Aspect Oriented Programming)</h1><h4 id="一、简介-1"><a href="#一、简介-1" class="headerlink" title="一、简介"></a>一、简介</h4><ol>
-<li>什么是aop</li>
-</ol>
-<ul>
+<h1 id="Aop-Aspect-Oriented-Programming"><a href="#Aop-Aspect-Oriented-Programming" class="headerlink" title="Aop(Aspect Oriented Programming)"></a>Aop(Aspect Oriented Programming)</h1><h4 id="一、简介-1"><a href="#一、简介-1" class="headerlink" title="一、简介"></a>一、简介</h4><h5 id="1-什么是aop"><a href="#1-什么是aop" class="headerlink" title="1. 什么是aop"></a>1. 什么是aop</h5><ul>
 <li>面向切面（<strong>目标方法和功能增强方法的结合</strong>）编程，通过<strong>预编译方式和运行期动态代理</strong>（完成程序功能之间的去耦合）实现程序功能的统一维护的一种技术。</li>
 <li>opp的一个延续，软件开发的热点，Spring框架的一个重要内容，函数式编程泛型。</li>
 <li>可以隔离业务逻辑，降低业务逻辑各部分的耦合性，提高程序的可重用性和开发效率。</li>
 </ul>
-<ol start="2">
-<li>aop的作用和优势</li>
-</ol>
-<ul>
+<h5 id="2-aop的作用和优势"><a href="#2-aop的作用和优势" class="headerlink" title="2. aop的作用和优势"></a>2. aop的作用和优势</h5><ul>
 <li>作用：<strong>程序运行</strong>期间，在<strong>不修改源码</strong>的情况下对方法进行<strong>功能增强</strong></li>
 <li>优势：减少重复代码，提高效率，便于维护</li>
 </ul>
-<ol start="3">
-<li>aop的底层实现原理–动态代理</li>
-</ol>
-<ul>
+<h5 id="3-aop的底层实现原理–动态代理"><a href="#3-aop的底层实现原理–动态代理" class="headerlink" title="3. aop的底层实现原理–动态代理"></a>3. aop的底层实现原理–动态代理</h5><ul>
 <li>通过spring提供的动态代理技术实现，在运行期间，spring生成动态代理对象，在执行时进行增强功能的介入，再去调用其方法，增强功能。</li>
 </ul>
-<ol start="4">
-<li><p>常用的动态代理技术</p>
-<ul>
+<h5 id="4-常用的动态代理技术"><a href="#4-常用的动态代理技术" class="headerlink" title="4. 常用的动态代理技术"></a>4. 常用的动态代理技术</h5><ul>
 <li>JDK代理：基于接口</li>
 </ul>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>spring_aop<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>jdk<span class="token punctuation">;</span>
@@ -999,11 +1024,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </code></pre>
 </li>
 </ul>
-</li>
-<li><p>aop相关概念</p>
-</li>
-</ol>
-<ul>
+<h5 id="5-aop相关概念"><a href="#5-aop相关概念" class="headerlink" title="5. aop相关概念"></a>5. aop相关概念</h5><ul>
 <li>Target:代理的目标对象</li>
 <li>Proxy:代理对象</li>
 <li>JoinPoint:连接点，spring指那些被拦截到的点（可以被增强的目标对象的方法）<strong>可以增强的方法</strong></li>
@@ -1012,9 +1033,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 <li><strong>Aspect</strong>（切面）：目标加增强即  <strong>切点加通知</strong></li>
 <li>Weaving(织入)：将切点和增强结合的过程</li>
 </ul>
-<ol start="6">
-<li><p>aop开发注意事项</p>
-<ul>
+<h5 id="6-aop开发注意事项"><a href="#6-aop开发注意事项" class="headerlink" title="6. aop开发注意事项"></a>6. aop开发注意事项</h5><ul>
 <li><p>需要编写的内容</p>
 <ul>
 <li>编写核心业务代码（目标类中的目标方法）</li>
@@ -1030,11 +1049,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 <p>没有：cglib</p>
 </li>
 </ul>
-</li>
-</ol>
-<h4 id="二、基于XML的AOP开发"><a href="#二、基于XML的AOP开发" class="headerlink" title="二、基于XML的AOP开发"></a>二、基于XML的AOP开发</h4><ol>
-<li><p>快速入门</p>
-<ul>
+<h4 id="二、基于XML的AOP开发"><a href="#二、基于XML的AOP开发" class="headerlink" title="二、基于XML的AOP开发"></a>二、基于XML的AOP开发</h4><h5 id="1-快速入门"><a href="#1-快速入门" class="headerlink" title="1. 快速入门"></a>1. 快速入门</h5><ul>
 <li><pre><code>导入AOP相关坐标
 </code></pre>
 </li>
@@ -1125,9 +1140,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </code></pre>
 </li>
 </ul>
-</li>
-<li><p>xml配置AOP详解</p>
-<ul>
+<h5 id="2-xml配置AOP详解"><a href="#2-xml配置AOP详解" class="headerlink" title="2. xml配置AOP详解"></a>2. xml配置AOP详解</h5><ul>
 <li><p>切点表达式的写法</p>
 <p>execution([修饰符]返回值类型 包名.类名.方法名（参数）)</p>
 <pre class=" language-xml"><code class="language-xml">pointcut="execution(public void com.example.spring_aop.aop.Target.save())"
@@ -1182,7 +1195,6 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 <li><p>小细节：切点表达式的抽取</p>
 <p><img src="C:\Users\86153\blog\themes\matery\source\medias\切点表达式的抽取.jpg"></p>
 </li>
-<li></li>
 <li><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>config</span><span class="token punctuation">></span></span>
 <span class="token comment" spellcheck="true">&lt;!--        声明切面--></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>aspect</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myAspect<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1200,9 +1212,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </ul>
 </li>
 </ul>
-</li>
-<li><p>基于注解的AOP开发</p>
-<ul>
+<h5 id="3-基于注解的AOP开发"><a href="#3-基于注解的AOP开发" class="headerlink" title="3. 基于注解的AOP开发"></a>3. 基于注解的AOP开发</h5><ul>
 <li><p>快速入门</p>
 <ul>
 <li><p>开发步骤（前2步同基于xml的AOP开发）</p>
@@ -1288,14 +1298,9 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </ul>
 </li>
 </ul>
-</li>
-</ol>
-<h1 id="编程式事务控制"><a href="#编程式事务控制" class="headerlink" title="编程式事务控制"></a>编程式事务控制</h1><h4 id="一、编程式事务控制相关对象"><a href="#一、编程式事务控制相关对象" class="headerlink" title="一、编程式事务控制相关对象"></a>一、编程式事务控制相关对象</h4><ol>
-<li><p>PlantformTransactionManager</p>
-<p><img src="C:\Users\86153\blog\themes\matery\source\medias\编程式事务管理.jpg"></p>
-</li>
+<h1 id="编程式事务控制"><a href="#编程式事务控制" class="headerlink" title="编程式事务控制"></a>编程式事务控制</h1><h4 id="一、编程式事务控制相关对象"><a href="#一、编程式事务控制相关对象" class="headerlink" title="一、编程式事务控制相关对象"></a>一、编程式事务控制相关对象</h4><h5 id="1-PlantformTransactionManager"><a href="#1-PlantformTransactionManager" class="headerlink" title="1. PlantformTransactionManager"></a>1. PlantformTransactionManager</h5><p><img src="C:\Users\86153\blog\themes\matery\source\medias\编程式事务管理.jpg"></p>
+<ol>
 <li><p>TransactionDefinition 事务的定义信息对象</p>
-<p>![](C:\Users\86153\blog\public\medias\事务定义对象 .jpg)</p>
 </li>
 <li><p>事务的隔离级别</p>
 <p>读未提交，读已提交，不可重复读，串行化          解决 脏读，不可重复读，和虚读（幻读）</p>
@@ -1303,18 +1308,13 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 <li><p>事务的传播行为  维护事务的相关参数</p>
 </li>
 <li><p>TransactionStatus   提供事务的运行状态</p>
-<p><img src=""></p>
-<p><img src="C:\Users\86153\blog\public\medias\TransactionStatus.jpg"></p>
 </li>
 </ol>
-<h4 id="二、基于XML的声明式事务控制"><a href="#二、基于XML的声明式事务控制" class="headerlink" title="二、基于XML的声明式事务控制"></a>二、基于XML的声明式事务控制</h4><ul>
-<li><p>什么是声明式事务控制？</p>
+<h4 id="二、基于XML的声明式事务控制"><a href="#二、基于XML的声明式事务控制" class="headerlink" title="二、基于XML的声明式事务控制"></a>二、基于XML的声明式事务控制</h4><h5 id="1-什么是声明式事务控制？"><a href="#1-什么是声明式事务控制？" class="headerlink" title="1. 什么是声明式事务控制？"></a>1. 什么是声明式事务控制？</h5><ul>
+<li><p>声明的方式控制事务，在配置文件中声明，用在Spring配置文件中声明式的处理事务来代替代码式的处理事务</p>
 <ul>
-<li>声明的方式控制事务，在配置文件中声明，用在Spring配置文件中声明式的处理事务来代替代码式的处理事务<ul>
 <li>解耦</li>
 <li>不需要事务管理的时候，修改一下配置文件就OK了，不用改代码</li>
-</ul>
-</li>
 </ul>
 </li>
 <li><p>小例子—转账业务</p>
@@ -1489,12 +1489,12 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </ol>
 </li>
 </ul>
-<h1 id="MyBatis-持久层框架"><a href="#MyBatis-持久层框架" class="headerlink" title="MyBatis(持久层框架)"></a>MyBatis(持久层框架)</h1><h4 id="一-简介"><a href="#一-简介" class="headerlink" title="一.简介"></a>一.简介</h4><ol>
-<li><p>原始jdbc操作</p>
-<p><img src="C:\Users\86153\blog\themes\matery\source\medias\jdbc原始.jpg"></p>
 </li>
-<li><p>原始的jdbc操作 问题分析</p>
-<pre><code>数据库连接创建释放 频繁，浪费资源，影响性能
+</ul>
+</li>
+</ul>
+<h1 id="MyBatis-持久层框架"><a href="#MyBatis-持久层框架" class="headerlink" title="MyBatis(持久层框架)"></a>MyBatis(持久层框架)</h1><h4 id="一-简介"><a href="#一-简介" class="headerlink" title="一.简介"></a>一.简介</h4><h5 id="1-原始jdbc操作"><a href="#1-原始jdbc操作" class="headerlink" title="1. 原始jdbc操作"></a>1. 原始jdbc操作</h5><p><img src="C:\Users\86153\blog\themes\matery\source\medias\jdbc原始.jpg"></p>
+<h5 id="2-原始的jdbc操作-问题分析"><a href="#2-原始的jdbc操作-问题分析" class="headerlink" title="2. 原始的jdbc操作 问题分析"></a>2. 原始的jdbc操作 问题分析</h5><pre><code>数据库连接创建释放 频繁，浪费资源，影响性能
 </code></pre>
 <ul>
 <li><p>sql语句在代码中硬编码，不宜维护，sql变动需要改代码，<strong>耦合</strong></p>
@@ -1509,12 +1509,8 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </ul>
 </li>
 </ul>
-</li>
-<li><p>什么是MyBatis?</p>
-<p>持久层框架、隐藏jdbc繁杂的api，只需要关注sql语句，实体对象和表中数据自动映射</p>
-<h4 id="二、快速入门"><a href="#二、快速入门" class="headerlink" title="二、快速入门"></a>二、快速入门</h4><ol>
-<li><p>开发步骤</p>
-<ul>
+<h5 id="3-什么是MyBatis"><a href="#3-什么是MyBatis" class="headerlink" title="3. 什么是MyBatis?"></a>3. 什么是MyBatis?</h5><p>持久层框架、隐藏jdbc繁杂的api，只需要关注sql语句，实体对象和表中数据自动映射</p>
+<h4 id="二、快速入门"><a href="#二、快速入门" class="headerlink" title="二、快速入门"></a>二、快速入门</h4><h5 id="2-1-开发步骤"><a href="#2-1-开发步骤" class="headerlink" title="2.1 开发步骤"></a>2.1 开发步骤</h5><ul>
 <li><p>添加MyBatis坐标  必须：  <strong>数据库驱动和mybatis框架的驱动</strong>    </p>
 <pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--        mysql驱动--></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
@@ -1610,13 +1606,9 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 </code></pre>
 </li>
 </ul>
-</li>
-</ol>
 <h4 id="三、Mybatis映射文件概述"><a href="#三、Mybatis映射文件概述" class="headerlink" title="三、Mybatis映射文件概述"></a>三、Mybatis映射文件概述</h4><ol>
 <li><p>介绍图</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Iw3wjS"><img src="https://z3.ax1x.com/2021/11/11/Iw3wjS.jpg" alt="Iw3wjS.jpg"></a></p>
-</li>
-</ol>
 </li>
 </ol>
 <h4 id="四、Mybatis的增删改查的操作"><a href="#四、Mybatis的增删改查的操作" class="headerlink" title="四、Mybatis的增删改查的操作"></a>四、Mybatis的增删改查的操作</h4><ul>
@@ -1757,12 +1749,8 @@ insert into user values(#{id},#{username},#{password})
 </ul>
 </li>
 </ul>
-<h4 id="五、Mybatis核心配置文件概述-sqlMapperConfig-xml"><a href="#五、Mybatis核心配置文件概述-sqlMapperConfig-xml" class="headerlink" title="五、Mybatis核心配置文件概述  sqlMapperConfig.xml"></a>五、Mybatis核心配置文件概述  sqlMapperConfig.xml</h4><ul>
-<li><h6 id="Mybatis核心配置文件层级关系"><a href="#Mybatis核心配置文件层级关系" class="headerlink" title="Mybatis核心配置文件层级关系"></a>Mybatis核心配置文件层级关系</h6></li>
-</ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IwrXBn"><img src="https://z3.ax1x.com/2021/11/11/IwrXBn.jpg" alt="IwrXBn.jpg"></a></p>
-<ul>
-<li><h6 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h6><ol>
+<h4 id="五、Mybatis核心配置文件概述-sqlMapperConfig-xml"><a href="#五、Mybatis核心配置文件概述-sqlMapperConfig-xml" class="headerlink" title="五、Mybatis核心配置文件概述  sqlMapperConfig.xml"></a>五、Mybatis核心配置文件概述  sqlMapperConfig.xml</h4><h6 id="Mybatis核心配置文件层级关系"><a href="#Mybatis核心配置文件层级关系" class="headerlink" title="Mybatis核心配置文件层级关系"></a>Mybatis核心配置文件层级关系</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IwrXBn"><img src="https://z3.ax1x.com/2021/11/11/IwrXBn.jpg" alt="IwrXBn.jpg"></a></p>
+<h6 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h6><ol>
 <li><h6 id="enviroments标签"><a href="#enviroments标签" class="headerlink" title="enviroments标签"></a>enviroments标签</h6><p>数据库环境的配置，支持多环境配置</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IwyTyQ"><img src="https://z3.ax1x.com/2021/11/11/IwyTyQ.jpg" alt="IwyTyQ.jpg"></a></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Iwc2PP"><img src="https://z3.ax1x.com/2021/11/11/Iwc2PP.jpg" alt="Iwc2PP.jpg"></a></p>
@@ -1811,19 +1799,14 @@ insert into user values(#{id},#{username},#{password})
 <p><img src="https://z3.ax1x.com/2021/11/11/IwyTyQ.jpg" alt="IwyTyQ.jpg"></p>
 </li>
 </ol>
-<h4 id="六、Mybatis的相应api"><a href="#六、Mybatis的相应api" class="headerlink" title="六、Mybatis的相应api"></a>六、Mybatis的相应api</h4><ol>
-<li><h6 id="SqlSession工厂构造器SqlSessionFactoryBuilder"><a href="#SqlSession工厂构造器SqlSessionFactoryBuilder" class="headerlink" title="SqlSession工厂构造器SqlSessionFactoryBuilder"></a>SqlSession工厂构造器SqlSessionFactoryBuilder</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Iw7aGQ"><img src="https://z3.ax1x.com/2021/11/11/Iw7aGQ.jpg" alt="Iw7aGQ.jpg"></a></p>
+<h4 id="六、Mybatis的相应api"><a href="#六、Mybatis的相应api" class="headerlink" title="六、Mybatis的相应api"></a>六、Mybatis的相应api</h4><h6 id="SqlSession工厂构造器SqlSessionFactoryBuilder"><a href="#SqlSession工厂构造器SqlSessionFactoryBuilder" class="headerlink" title="SqlSession工厂构造器SqlSessionFactoryBuilder"></a>SqlSession工厂构造器SqlSessionFactoryBuilder</h6><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Iw7aGQ"><img src="https://z3.ax1x.com/2021/11/11/Iw7aGQ.jpg" alt="Iw7aGQ.jpg"></a></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Iw7d2j"><img src="https://z3.ax1x.com/2021/11/11/Iw7d2j.jpg" alt="Iw7d2j.jpg"></a></p>
-</li>
-</ol>
-<h4 id="Mybatis的Dao层实现"><a href="#Mybatis的Dao层实现" class="headerlink" title="Mybatis的Dao层实现"></a>Mybatis的Dao层实现</h4><ol>
-<li><h6 id="传统的开发方式-实现接口"><a href="#传统的开发方式-实现接口" class="headerlink" title="传统的开发方式   实现接口"></a>传统的开发方式   实现接口</h6><ul>
+<h4 id="七、Mybatis的Dao层实现"><a href="#七、Mybatis的Dao层实现" class="headerlink" title="七、Mybatis的Dao层实现"></a>七、Mybatis的Dao层实现</h4><h6 id="传统的开发方式-实现接口"><a href="#传统的开发方式-实现接口" class="headerlink" title="传统的开发方式   实现接口"></a>传统的开发方式   实现接口</h6><ul>
 <li><p>三层架构，</p>
 <p>service调用dao。。。。。</p>
 </li>
 </ul>
-</li>
-<li><h6 id="代理开发方式-不用实现接口"><a href="#代理开发方式-不用实现接口" class="headerlink" title="代理开发方式   不用实现接口"></a>代理开发方式   不用实现接口</h6><ul>
+<h6 id="代理开发方式-不用实现接口"><a href="#代理开发方式-不用实现接口" class="headerlink" title="代理开发方式   不用实现接口"></a>代理开发方式   不用实现接口</h6><ul>
 <li><p>介绍</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/I0pSIA"><img src="https://z3.ax1x.com/2021/11/11/I0pSIA.jpg" alt="I0pSIA.jpg"></a></p>
 <ul>
@@ -1847,14 +1830,9 @@ insert into user values(#{id},#{username},#{password})
 </ul>
 </li>
 </ul>
-</li>
-</ol>
-</li>
-</ul>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/I0p1MT"><img src="https://z3.ax1x.com/2021/11/11/I0p1MT.jpg" alt="I0p1MT.jpg"></a></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/I0p5y8"><img src="https://z3.ax1x.com/2021/11/11/I0p5y8.jpg" alt="I0p5y8.jpg"></a></p>
-<h4 id="Mybatis映射文件深入"><a href="#Mybatis映射文件深入" class="headerlink" title="Mybatis映射文件深入"></a>Mybatis映射文件深入</h4><ol>
-<li><h6 id="动态sql语句"><a href="#动态sql语句" class="headerlink" title="动态sql语句"></a>动态sql语句</h6><ul>
+<h4 id="八、Mybatis映射文件深入"><a href="#八、Mybatis映射文件深入" class="headerlink" title="八、Mybatis映射文件深入"></a>八、Mybatis映射文件深入</h4><h6 id="动态sql语句"><a href="#动态sql语句" class="headerlink" title="动态sql语句"></a>动态sql语句</h6><ul>
 <li><p>概述</p>
 <p>业务逻辑复杂的时候，我们的SQL就是动态变化的</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>test<span class="token punctuation">;</span>
@@ -1948,8 +1926,7 @@ select * from user
 </code></pre>
 </li>
 </ul>
-</li>
-<li><p>标签深入</p>
+<p>标签深入</p>
 <ul>
 <li><p>typeHandles  类型处理器</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IBQb36"><img src="https://z3.ax1x.com/2021/11/12/IBQb36.jpg" alt="IBQb36.jpg"></a></p>
@@ -2061,9 +2038,7 @@ select * from user
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IB61t1"><img src="https://z3.ax1x.com/2021/11/12/IB61t1.jpg" alt="IB61t1.jpg"></a></p>
 </li>
 </ul>
-</li>
-</ol>
-<h4 id="核心文件常用标签"><a href="#核心文件常用标签" class="headerlink" title="核心文件常用标签"></a>核心文件常用标签</h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IBzAl6"><img src="https://z3.ax1x.com/2021/11/12/IBzAl6.jpg" alt="IBzAl6.jpg"></a></p>
+<h4 id="九、核心文件常用标签"><a href="#九、核心文件常用标签" class="headerlink" title="九、核心文件常用标签"></a>九、核心文件常用标签</h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IBzAl6"><img src="https://z3.ax1x.com/2021/11/12/IBzAl6.jpg" alt="IBzAl6.jpg"></a></p>
 <pre class=" language-xml-dtd"><code class="language-xml-dtd"><?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
@@ -2110,9 +2085,7 @@ select * from user
 
 </configuration>
 </code></pre>
-<h4 id="Mybatis的多表操作"><a href="#Mybatis的多表操作" class="headerlink" title="Mybatis的多表操作"></a>Mybatis的多表操作</h4><ul>
-<li><p>一对一</p>
-<p>实体类</p>
+<h4 id="十、Mybatis的多表操作"><a href="#十、Mybatis的多表操作" class="headerlink" title="十、Mybatis的多表操作"></a>十、Mybatis的多表操作</h4><h5 id="一对一"><a href="#一对一" class="headerlink" title="一对一"></a>一对一</h5><p>实体类</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>itheima<span class="token punctuation">.</span>domain<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Date<span class="token punctuation">;</span>
@@ -2209,9 +2182,7 @@ select * from user
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IDuOL4"><img src="https://z3.ax1x.com/2021/11/12/IDuOL4.jpg" alt="IDuOL4.jpg"></a></p>
-</li>
-<li><p>一对多</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8" ?></span>
+<h5 id="一对多"><a href="#一对多" class="headerlink" title="一对多"></a>一对多</h5><pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8" ?></span>
 <span class="token doctype">&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.itheima.mapper.UserMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -2233,9 +2204,7 @@ select * from user
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre>
-</li>
-<li><p>多对多</p>
-<pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--多对多--></span>
+<h5 id="多对多"><a href="#多对多" class="headerlink" title="多对多"></a>多对多</h5><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!--多对多--></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resultMap</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>userRoleMap<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
         <span class="token comment" spellcheck="true">&lt;!--    封装user内部的roleList信息--></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span> <span class="token attr-name">column</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
@@ -2261,10 +2230,8 @@ select * from user
           and ur.roleId = r.id
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span> 
 </code></pre>
-</li>
-</ul>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Igl734"><img src="https://z3.ax1x.com/2021/11/15/Igl734.jpg" alt="Igl734.jpg"></a></p>
-<h4 id="Mybatis注解开发常用注解"><a href="#Mybatis注解开发常用注解" class="headerlink" title="Mybatis注解开发常用注解"></a>Mybatis注解开发常用注解</h4><h6 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h6><ul>
+<h4 id="十一、Mybatis注解开发常用注解"><a href="#十一、Mybatis注解开发常用注解" class="headerlink" title="十一、Mybatis注解开发常用注解"></a>十一、Mybatis注解开发常用注解</h4><h6 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h6><ul>
 <li><p>简单查询</p>
 <ol>
 <li><p>在核心配置文件sqlMapConfig.xml里面指定接口所在的包。</p>
@@ -2311,7 +2278,7 @@ select * from user
 </li>
 <li><p>复杂查询</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/IgDc2n"><img src="https://z3.ax1x.com/2021/11/15/IgDc2n.jpg" alt="IgDc2n.jpg"></a></p>
-<h6 id="一对一"><a href="#一对一" class="headerlink" title="一对一"></a>一对一</h6><pre class=" language-xml"><code class="language-xml">@Select(" select * from orders o,user u where o.uid=u.uid")
+<h6 id="一对一-1"><a href="#一对一-1" class="headerlink" title="一对一"></a>一对一</h6><pre class=" language-xml"><code class="language-xml">@Select(" select * from orders o,user u where o.uid=u.uid")
 @Results(
         {@Result(column = "id",property ="id"),
                 @Result(column ="ordertime",property ="orderTime" ),
@@ -2391,10 +2358,6 @@ public List<span class="token tag"><span class="token tag"><span class="token pu
 <p>mybatis–dao    spring-三层融合   spring-mvc-web</p>
 </li>
 </ol>
-</li>
-</ul>
-</li>
-</ul>
 
                 
             </div>
@@ -2458,11 +2421,7 @@ public List<span class="token tag"><span class="token tag"><span class="token pu
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Spring/">
-                                    <span class="chip bg-color">Spring</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -2628,7 +2587,7 @@ public List<span class="token tag"><span class="token tag"><span class="token pu
     disqus_config = function () {
         this.page.url = 'https://yihuayishijian.github.io/2021/11/16/spring-xiao-jie/';
         this.page.identifier = '/2021/11/16/spring-xiao-jie/';
-        this.page.title = 'Spring小结';
+        this.page.title = '';
     };
     let disqus_shortname = '';
 
@@ -3165,7 +3124,7 @@ public List<span class="token tag"><span class="token tag"><span class="token pu
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">15.9k</span>
+                        class="white-color">17.6k</span>
             
             
             
