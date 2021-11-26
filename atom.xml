@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>郭硕的第一个博客（HEXO）</title>
+  
+  <subtitle>我有嘉宾，鼓瑟鼓琴。</subtitle>
+  <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://yihuayishijian.github.io/"/>
+  <updated>2021-11-24T04:40:56.749Z</updated>
+  <id>https://yihuayishijian.github.io/</id>
+  
+  <author>
+    <name>郭硕</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>launch</title>
+    <link href="https://yihuayishijian.github.io/2021/11/23/launch/"/>
+    <id>https://yihuayishijian.github.io/2021/11/23/launch/</id>
+    <published>2021-11-23T08:03:50.000Z</published>
+    <updated>2021-11-24T04:40:56.749Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;一、分析&quot;&gt;&lt;a href=&quot;#一、分析&quot; class=&quot;headerlink&quot; title=&quot;一、分析&quot;&gt;&lt;/a&gt;一、分析&lt;/h4&gt;&lt;h5 id=&quot;第一步应该是技术选型，用什么技术来实现这些功能。&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="-Spring注解 -Java" scheme="https://yihuayishijian.github.io/tags/Spring%E6%B3%A8%E8%A7%A3-Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring复习巩固</title>
+    <link href="https://yihuayishijian.github.io/2021/11/18/spring-fu-xi-gong-gu/"/>
+    <id>https://yihuayishijian.github.io/2021/11/18/spring-fu-xi-gong-gu/</id>
+    <published>2021-11-18T00:36:09.000Z</published>
+    <updated>2021-11-19T07:31:15.045Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+    <category term="Spring" scheme="https://yihuayishijian.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring注解开发</title>
+    <link href="https://yihuayishijian.github.io/2021/11/17/spring-zhu-jie-kai-fa/"/>
+    <id>https://yihuayishijian.github.io/2021/11/17/spring-zhu-jie-kai-fa/</id>
+    <published>2021-11-17T02:49:37.000Z</published>
+    <updated>2021-11-26T11:38:03.321Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;IOC控制反转，一种思想（Invocation-Of-Control）—–-gt-解耦&quot;&gt;&lt;a href=&quot;#IOC控制反转，一种思想（Invocation-Of-Control）—–-gt-解耦&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Spring注解开发" scheme="https://yihuayishijian.github.io/tags/Spring%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Java学习这回事</title>
+    <link href="https://yihuayishijian.github.io/2021/11/17/guan-yu-java-xue-xi-zhe-hui-shi/"/>
+    <id>https://yihuayishijian.github.io/2021/11/17/guan-yu-java-xue-xi-zhe-hui-shi/</id>
+    <published>2021-11-17T01:15:32.000Z</published>
+    <updated>2021-11-17T01:35:26.418Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;学习就是重复，看一遍会了不等于学会！！！！&quot;&gt;&lt;a href=&quot;#学习就是重复，看一遍会了不等于学会！！！！&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git</title>
+    <link href="https://yihuayishijian.github.io/2021/11/16/git/"/>
+    <id>https://yihuayishijian.github.io/2021/11/16/git/</id>
+    <published>2021-11-16T00:47:07.000Z</published>
+    <updated>2021-11-16T11:25:21.790Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Git-分布式&quot;&gt;&lt;a href=&quot;#Git-分布式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+    <category term="Git" scheme="https://yihuayishijian.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSM整合（配置地狱啊（；´д｀）ゞ）</title>
+    <link href="https://yihuayishijian.github.io/2021/11/15/ssm-zheng-he-pei-zhi-di-yu-a-d/"/>
+    <id>https://yihuayishijian.github.io/2021/11/15/ssm-zheng-he-pei-zhi-di-yu-a-d/</id>
+    <published>2021-11-15T09:11:04.000Z</published>
+    <updated>2021-11-15T10:40:02.859Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SSM整合（配置地狱啊（；´д｀）ゞ）&quot;&gt;&lt;a href=&quot;#SSM整合（配置地狱啊（；´д｀）ゞ）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ssm java" scheme="https://yihuayishijian.github.io/tags/ssm-java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java动态代理</title>
+    <link href="https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/"/>
+    <id>https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/</id>
+    <published>2021-11-10T01:51:15.000Z</published>
+    <updated>2021-11-16T11:15:26.724Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;Java动态代理&quot;&gt;&lt;a href=&quot;#Java动态代理&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="java" scheme="https://yihuayishijian.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浮生日记</title>
+    <link href="https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/"/>
+    <id>https://yihuayishijian.github.io/2021/11/08/fu-sheng-ri-ji/</id>
+    <published>2021-11-08T00:47:49.000Z</published>
+    <updated>2021-11-26T11:28:32.292Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+    <category term="日记" scheme="https://yihuayishijian.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring复习巩固后半部分</title>
+    <link href="https://yihuayishijian.github.io/2021/11/06/spring-xiao-jie/"/>
+    <id>https://yihuayishijian.github.io/2021/11/06/spring-xiao-jie/</id>
+    <published>2021-11-06T00:47:07.000Z</published>
+    <updated>2021-11-19T08:21:54.383Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+    <category term="Spring" scheme="https://yihuayishijian.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>郭硕的第一篇博客</title>
+    <link href="https://yihuayishijian.github.io/2021/11/05/guo-shuo-de-di-yi-pian-bo-ke/"/>
+    <id>https://yihuayishijian.github.io/2021/11/05/guo-shuo-de-di-yi-pian-bo-ke/</id>
+    <published>2021-11-05T11:36:44.000Z</published>
+    <updated>2021-11-05T11:56:16.694Z</updated>
+    
+    
+    
+    
+    
+    <category term="Typora" scheme="https://yihuayishijian.github.io/tags/Typora/"/>
+    
+    <category term="Markdown" scheme="https://yihuayishijian.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://yihuayishijian.github.io/2021/11/04/hello-world/"/>
+    <id>https://yihuayishijian.github.io/2021/11/04/hello-world/</id>
+    <published>2021-11-04T03:28:30.191Z</published>
+    <updated>2021-11-04T03:28:30.192Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
