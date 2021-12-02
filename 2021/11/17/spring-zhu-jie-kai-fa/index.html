@@ -32,9 +32,9 @@
     <script src="/libs/jquery/jquery.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="郭硕的第一个博客（HEXO）" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="郭硕的第一个博客（HEXO）" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -540,21 +540,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-26
+                    2021-11-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    16 分
+                    17 分
                 </div>
                 
 
@@ -1107,7 +1107,31 @@
 <h6 id="Lazy"><a href="#Lazy" class="headerlink" title="@Lazy"></a>@Lazy</h6><p>@Target({ElementType.TYPE, ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.FIELD})<br>@Retention(RetentionPolicy.RUNTIME)<br>@Documented<br>public @interface Lazy {<br>    boolean value() default true;<br>}</p>
 <p>作用：<br>    用于指定单例bean对象的创建时机。在没有使用此注解时，单例bean的生命周期与容器相同。但是当使用了此注解之后，单例对象的创建时机变成了第一次使用时创建。注意：这不是延迟加载思想（因为不是每次使用时都创建，<strong>只是第一次创建的时机改变了</strong>）。<br>属性：<br>    value:<br>        指定是否采用延迟加载。默认值为true，表示开启。<br>使用场景：<br>    在实际开发中，当我们的Bean是单例对象时，并不是每个都需要一开始都加载到ioc容器之中，有些对象可以在真正使用的时候再加载，当有此需求时，即可使用此注解。值得注意的是，此注解只对单例bean对象起作用，当指定了@Scope注解的prototype取值后，此注解不起作用。</p>
 <h6 id="Conditional"><a href="#Conditional" class="headerlink" title="@Conditional"></a>@Conditional</h6><p>作用：<br>    它的作用是根据条件选择注入的bean对象。<br>属性：<br>    value:<br>        用于提供一个Condition接口的实现类，实现类中需要编写具体代码实现注入的条件。<br>使用场景：<br>    当我们在开发时，可能会使用多平台来测试，例如我们的测试数据库分别部署到了linux和windows两个操作系统上面，现在根据我们的工程运行环境选择连接的数据库。此时就可以使用此注解。同时基于此注解引出的@Profile注解，就是根据不同的环境，加载不同的配置信息，详情请参考第五章第9小节@Profile的使用。</p>
-<h6 id=""><a href="#" class="headerlink" title=""></a></h6>
+<h5 id="3-2关于-autowired"><a href="#3-2关于-autowired" class="headerlink" title="3.2关于@autowired"></a>3.2关于@autowired</h5><p>自动按照类型注入，有唯一匹配没问题</p>
+<p>没有唯一属性，required为true  抛出noSuchBean的异常</p>
+<p>​                                             false   空指针异常</p>
+<p>​                     多个匹配，使用被注入的变量名称作为bean的id在容器里面匹配</p>
+<p>​                                        匹配失败，也报expected 1 but 好几个的错误</p>
+<h5 id="3-3-qualifiered-不能脱离autowired来使用"><a href="#3-3-qualifiered-不能脱离autowired来使用" class="headerlink" title="3.3@qualifiered  不能脱离autowired来使用"></a>3.3@qualifiered  不能脱离autowired来使用</h5><p>按照bean的id匹配</p>
+<h5 id="3-4scope"><a href="#3-4scope" class="headerlink" title="3.4scope"></a>3.4scope</h5><h5 id="3-5-inject-name-关系和-autowired与-qualifiered的关系一样-可以互相组合"><a href="#3-5-inject-name-关系和-autowired与-qualifiered的关系一样-可以互相组合" class="headerlink" title="3.5  @inject+@name   关系和@autowired与@qualifiered的关系一样   可以互相组合"></a>3.5  @inject+@name   关系和@autowired与@qualifiered的关系一样   可以互相组合</h5><h5 id="3-6-Resource-既可以指定name也可以指定类型，或者二者都可以-type-””-name-””"><a href="#3-6-Resource-既可以指定name也可以指定类型，或者二者都可以-type-””-name-””" class="headerlink" title="3.6@Resource  既可以指定name也可以指定类型，或者二者都可以 type=”” name=””"></a>3.6@Resource  既可以指定name也可以指定类型，或者二者都可以 type=”” name=””</h5><h5 id="3-7-Primary-类（自定义的类）方法上（返回值是bean的方法）"><a href="#3-7-Primary-类（自定义的类）方法上（返回值是bean的方法）" class="headerlink" title="3.7@Primary 类（自定义的类）方法上（返回值是bean的方法）"></a>3.7@Primary 类（自定义的类）方法上（返回值是bean的方法）</h5><p>指定Besn注入的优先级</p>
+<h5 id="PostConstruct-没属性-指定初始化方法"><a href="#PostConstruct-没属性-指定初始化方法" class="headerlink" title="@PostConstruct  没属性  指定初始化方法"></a>@PostConstruct  没属性  指定初始化方法</h5><h5 id="PreDestory-没属性-指定销毁方法"><a href="#PreDestory-没属性-指定销毁方法" class="headerlink" title="@PreDestory  没属性   指定销毁方法"></a>@PreDestory  没属性   指定销毁方法</h5><h4 id="四、Spring高级分析BeanFactory"><a href="#四、Spring高级分析BeanFactory" class="headerlink" title="四、Spring高级分析BeanFactory"></a>四、Spring高级分析BeanFactory</h4><h5 id="4-1-容器对象的创建方式"><a href="#4-1-容器对象的创建方式" class="headerlink" title="4.1 容器对象的创建方式"></a>4.1 容器对象的创建方式</h5><p>和Junit整合</p>
+<pre class=" language-\"><code class="language-\">@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SpringConfiguration.class)
+@ActiveProfiles("dev")
+public class SpringTest {
+    @Autowired
+    private DruidDataSource dataSource;
+    @Test
+    public void testDatasource(){
+        System.out.println(dataSource.getMaxActive());
+        System.out.println(dataSource.getPassword());
+    }
+}
+</code></pre>
+<p>手动创建</p>
+<pre class=" language-java"><code class="language-java">AnnotationConfigApplicationContext an<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">AnnotationConfigApplicationContext</span><span class="token punctuation">(</span><span class="token string">"config"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h5 id="4-2-Spring中的BeanFactory"><a href="#4-2-Spring中的BeanFactory" class="headerlink" title="4.2 Spring中的BeanFactory"></a>4.2 Spring中的BeanFactory</h5><h6 id=""><a href="#" class="headerlink" title=""></a></h6>
                 
             </div>
             <hr/>
@@ -1877,7 +1901,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">22k</span>
+                        class="white-color">23.6k</span>
             
             
             
