@@ -6,7 +6,7 @@
   <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://yihuayishijian.github.io/"/>
-  <updated>2021-12-02T13:25:49.834Z</updated>
+  <updated>2021-12-04T01:25:43.243Z</updated>
   <id>https://yihuayishijian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>四六级</title>
+    <link href="https://yihuayishijian.github.io/2021/12/04/si-liu-ji/"/>
+    <id>https://yihuayishijian.github.io/2021/12/04/si-liu-ji/</id>
+    <published>2021-12-04T00:47:40.000Z</published>
+    <updated>2021-12-04T01:25:43.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h4&gt;&lt;p&gt; </summary>
+        
+      
+    
+    
+    
+    
+    <category term="四六级小Tip" scheme="https://yihuayishijian.github.io/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7%E5%B0%8FTip/"/>
+    
+  </entry>
   
   <entry>
     <title>十大排序算法</title>

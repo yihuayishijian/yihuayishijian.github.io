@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java动态代理, HTML,CSS,JavaScript,Java,JavaWeb,Ssm等">
-    <meta name="description" content="Java动态代理">
+    <meta name="keywords" content="四六级, HTML,CSS,JavaScript,Java,JavaWeb,Ssm等">
+    <meta name="description" content="前言：  满分为710分，其中，听力部分占248.5分（**35%），阅读理解部分占248.5分（35%**），翻译部分占106.5分（15% ），写作部分占106.5分（15% ） 。
+关于备考和做题：考试不光考阅读，还有听力，翻译和写作">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java动态代理 | 郭硕的第一个博客（HEXO）</title>
+    <title>四六级 | 郭硕的第一个博客（HEXO）</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -395,12 +396,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java动态代理</h1>
+                    <h1 class="description center-align post-title">四六级</h1>
                 </div>
             </div>
         </div>
@@ -516,8 +517,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
+                            <a href="/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7%E5%B0%8FTip/">
+                                <span class="chip bg-color">四六级小Tip</span>
                             </a>
                         
                     </div>
@@ -532,21 +533,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-10
+                    2021-12-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-16
+                    2021-12-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    267
+                    380
                 </div>
                 
 
@@ -573,41 +574,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="Java动态代理"><a href="#Java动态代理" class="headerlink" title="Java动态代理"></a>Java动态代理</h1><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>学习spring的aop动态代理的时候看老师视频看不懂了，结尾老师建议看不懂就先去复习。</p>
-<p>我懒得写笔记了。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>example<span class="token punctuation">.</span>spring_aop<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>jdk<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span>InvocationHandler<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span>Method<span class="token punctuation">;</span>
-<span class="token keyword">import</span> java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span>Proxy<span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ProxyTest</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-       <span class="token comment" spellcheck="true">//目标对象</span>
-        <span class="token keyword">final</span> Target target<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Target</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-       <span class="token comment" spellcheck="true">//获得增强对象</span>
-        Advice advice<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Advice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token comment" spellcheck="true">//参数分别是：1.目标对象加载器2.目标对象相同的接口字节码的对象数组2.InvocationHandler接口</span>
-        <span class="token comment" spellcheck="true">//代理对象返回的对象实际上是一个系统动态生成的proxy对象，这个对象和“真实对象”之间的关联是“有同样的接口”，而不是“能互相转型”。</span>
-               TargetInterface proxy<span class="token operator">=</span> <span class="token punctuation">(</span>TargetInterface<span class="token punctuation">)</span> Proxy<span class="token punctuation">.</span><span class="token function">newProxyInstance</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> target<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getInterfaces</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">InvocationHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token annotation punctuation">@Override</span>
-            <span class="token comment" spellcheck="true">//调用代理对象的任何方法，实质执行的都是invoke方法</span>
-            <span class="token keyword">public</span> Object <span class="token function">invoke</span><span class="token punctuation">(</span>Object proxy<span class="token punctuation">,</span> Method method<span class="token punctuation">,</span> Object<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> Throwable <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">//执行目标方法</span>
-                <span class="token comment" spellcheck="true">// 前置增强</span>
-                advice<span class="token punctuation">.</span><span class="token function">before</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                Object invoke <span class="token operator">=</span> method<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">//后置增强</span>
-                advice<span class="token punctuation">.</span><span class="token function">afterReturning</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">return</span> invoke<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-       <span class="token comment" spellcheck="true">//调用代理对象方法</span>
-        proxy<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+                <h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p>  满分为710分，其中，听力部分占248.5分（**35%<strong>），阅读理解部分占248.5分（</strong>35%**），翻译部分占106.5分（15% ），写作部分占106.5分（15% ） 。</p>
+<h4 id="关于备考和做题：考试不光考阅读，还有听力，翻译和写作！！！"><a href="#关于备考和做题：考试不光考阅读，还有听力，翻译和写作！！！" class="headerlink" title="关于备考和做题：考试不光考阅读，还有听力，翻译和写作！！！"></a><strong>关于备考和做题：</strong>考试不光考阅读，还有听力，翻译和写作！！！</h4><ul>
+<li><p> 好好准备听力，无论是四级还是六级，听力都占着不小地比重，但我发现身边的很多朋友在备考的时候这块的准备却并不充分，很多人觉得难，不知道怎么去准备。我说说我使用的方法：<strong>精听</strong>：在App（乐听，每日英语听力······）上面找历年的真题，每天花15–30分钟精听几篇真题文章，先不看原文听几遍，再对照着原文去听，找自己的问题，单词不会或者是单纯的跟不上，之后再不看原文听，听到自己跟得上，听得懂！✨✨</p>
+</li>
+<li><p>阅读：推荐带着问题去找答案，单词总会遇见不会的，很多时候可以靠上下文猜的，即使不知道单词的意思也不会有太大影响，但读不懂句子也有可能是因为基础语法的薄弱。基础差点的同学可以去看看定语从句、虚拟语气等语法知识点，切勿盲目刷题。段落匹配虽然多，但难度并不大，要细心。</p>
+</li>
+<li><p>翻译和写作：靠平时练习的积累，我这部分的分也比较低，就不多说了。  </p>
+</li>
+</ul>
 
                 
             </div>
@@ -634,7 +609,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/">https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/</a>
+                    <a href="https://yihuayishijian.github.io/2021/12/04/si-liu-ji/">https://yihuayishijian.github.io/2021/12/04/si-liu-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -672,8 +647,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
+                                <a href="/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7%E5%B0%8FTip/">
+                                    <span class="chip bg-color">四六级小Tip</span>
                                 </a>
                             
                         </div>
@@ -839,9 +814,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://yihuayishijian.github.io/2021/11/10/java-dong-tai-dai-li/';
-        this.page.identifier = '/2021/11/10/java-dong-tai-dai-li/';
-        this.page.title = 'java动态代理';
+        this.page.url = 'https://yihuayishijian.github.io/2021/12/04/si-liu-ji/';
+        this.page.identifier = '/2021/12/04/si-liu-ji/';
+        this.page.title = '四六级';
     };
     let disqus_shortname = '';
 
@@ -1137,29 +1112,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/11/15/ssm-zheng-he-pei-zhi-di-yu-a-d/">
+                <a href="/2021/12/04/si-liu-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SSM整合（配置地狱啊（；´д｀）ゞ）">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="四六级">
                         
-                        <span class="card-title">SSM整合（配置地狱啊（；´д｀）ゞ）</span>
+                        <span class="card-title">四六级</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SSM整合（配置地狱啊（；´д｀）ゞ）
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1168,11 +1144,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ssm-java/">
-                        <span class="chip bg-color">ssm java</span>
+                    <a href="/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7%E5%B0%8FTip/">
+                        <span class="chip bg-color">四六级小Tip</span>
                     </a>
                     
                 </div>
@@ -1186,24 +1163,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/08/fu-sheng-ri-ji/">
+                <a href="/2021/12/02/shi-da-pai-xu-suan-fa/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="浮生日记">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="十大排序算法">
                         
-                        <span class="card-title">浮生日记</span>
+                        <span class="card-title">十大排序算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            浮生日记( •̀ ω •́ )✧
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-02
                             </span>
                         <span class="publish-author">
                             
@@ -1216,16 +1193,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
-                    </a>
-                    
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%97%A5%E8%AE%B0/">
-                        <span class="chip bg-color">日记</span>
+                    <a href="/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">排序算法</span>
                     </a>
                     
                 </div>
