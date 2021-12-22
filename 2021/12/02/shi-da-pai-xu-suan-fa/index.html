@@ -543,21 +543,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-02
+                    2021-12-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    6 分
                 </div>
                 
 
@@ -728,6 +728,55 @@ i<span class="token operator">=</span>i<span class="token operator">*</span><spa
 </code></pre>
 </li>
 </ul>
+<h5 id="小问题：当插入的数较小的时候，后移的次数明显增多"><a href="#小问题：当插入的数较小的时候，后移的次数明显增多" class="headerlink" title="小问题：当插入的数较小的时候，后移的次数明显增多"></a>小问题：当插入的数较小的时候，后移的次数明显增多</h5><h4 id="六、希尔排序（更高效的插入排序）"><a href="#六、希尔排序（更高效的插入排序）" class="headerlink" title="六、希尔排序（更高效的插入排序）"></a>六、希尔排序（更高效的插入排序）</h4><h5 id="思想："><a href="#思想：" class="headerlink" title="思想："></a>思想：</h5><p>将记录按增量分组，对每组使用直接插入排序算法排序，套娃到增量为1就🆗了。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2021/12/8983922b3386a817.jpg"></p>
+<h5 id="交换法"><a href="#交换法" class="headerlink" title="交换法"></a>交换法</h5><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//Shell排序 交换法</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">shellSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//  int [] arr={8,9,1,7,2,3,5,4,6,0};</span>
+    <span class="token keyword">int</span> temp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//逐步推导</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> gap <span class="token operator">=</span> array<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> gap <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> gap <span class="token operator">/=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> gap<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//i=5,2,1</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">-</span> gap<span class="token punctuation">;</span> j <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">-=</span> gap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//如果当前元素大于加上步长之后的那个元素，说明交换</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> array<span class="token punctuation">[</span>j <span class="token operator">+</span> gap<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    temp <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>j <span class="token operator">+</span> gap<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    array<span class="token punctuation">[</span>j <span class="token operator">+</span> gap<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        count<span class="token operator">++</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"希尔排序第"</span> <span class="token operator">+</span> count <span class="token operator">+</span> <span class="token string">"轮:"</span> <span class="token operator">+</span> Arrays<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h5 id="移动法-真牛逼八百万随机数据的排序-3-9秒就欧克了"><a href="#移动法-真牛逼八百万随机数据的排序-3-9秒就欧克了" class="headerlink" title="移动法  真牛逼八百万随机数据的排序   3.9秒就欧克了"></a>移动法  真牛逼八百万随机数据的排序   3.9秒就欧克了</h5><pre class=" language-java"><code class="language-java">   <span class="token comment" spellcheck="true">//Shell排序 交换法优化 --> 移位法</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">shellSortNew</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> gap <span class="token operator">=</span> array<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> gap <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> gap <span class="token operator">/=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//从第gap个元素开始逐个对其所在的组  进行直接插入</span>
+<span class="token comment" spellcheck="true">//        int i;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> m <span class="token operator">=</span> gap<span class="token punctuation">;</span> m <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> m<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">int</span> j <span class="token operator">=</span> m<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//待插入的位置</span>
+                <span class="token keyword">int</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//记录要插入的值</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> array<span class="token punctuation">[</span>j <span class="token operator">-</span> gap<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//当前元素比减去步长的那个元素小</span>
+                    <span class="token keyword">while</span> <span class="token punctuation">(</span>j <span class="token operator">-</span> gap <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> temp <span class="token operator">&lt;</span> array<span class="token punctuation">[</span>j <span class="token operator">-</span> gap<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">//移动  将更大的那个数移到步长</span>
+                        array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>j <span class="token operator">-</span> gap<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        j <span class="token operator">-=</span> gap<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h4 id="七、快速排序（对冒泡的改进）"><a href="#七、快速排序（对冒泡的改进）" class="headerlink" title="七、快速排序（对冒泡的改进）"></a>七、快速排序（对冒泡的改进）</h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/owLi2n"><img src="https://s4.ax1x.com/2021/12/04/owLi2n.jpg" alt="owLi2n.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/owL6Z8"><img src="https://s4.ax1x.com/2021/12/04/owL6Z8.jpg" alt="owL6Z8.jpg"></a></p>
 
                 
             </div>
@@ -1487,7 +1536,7 @@ i<span class="token operator">=</span>i<span class="token operator">*</span><spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">23.9k</span>
+                        class="white-color">25.1k</span>
             
             
             
