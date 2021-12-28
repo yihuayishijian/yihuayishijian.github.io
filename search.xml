@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>淘来的校园二手项目练手</title>
+      <link href="/2021/12/28/tao-lai-de-xiao-yuan-er-shou-xiang-mu-lian-shou/"/>
+      <url>/2021/12/28/tao-lai-de-xiao-yuan-er-shou-xiang-mu-lian-shou/</url>
+      
+        <content type="html"><![CDATA[<h4 id="项目发布问题一"><a href="#项目发布问题一" class="headerlink" title="项目发布问题一:"></a>项目发布问题一:</h4><ul><li><p>图片显示不出来</p><p>在图片加载的路径加了  “/static”</p><p><a href="https://imgtu.com/i/T6SdyQ"><img src="https://s4.ax1x.com/2021/12/28/T6SdyQ.jpg" alt="T6SdyQ.jpg"></a></p></li><li><p>上传图片</p><p>解决：替换原先路径</p><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//        String pathname = "D:\\campusshops\\file\\" + filenames;</span>        String pathname <span class="token operator">=</span> <span class="token string">"C:\\Users\\86153\\Desktop\\"</span> <span class="token operator">+</span> filenames<span class="token punctuation">;</span></code></pre><p><a href="https://imgtu.com/i/T6Cvm4"><img src="https://s4.ax1x.com/2021/12/28/T6Cvm4.jpg" alt="T6Cvm4.jpg"></a></p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络</title>
       <link href="/2021/12/22/ji-suan-ji-zu-cheng-yuan-li/"/>
       <url>/2021/12/22/ji-suan-ji-zu-cheng-yuan-li/</url>

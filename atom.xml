@@ -6,7 +6,7 @@
   <link href="https://yihuayishijian.github.io/atom.xml" rel="self"/>
   
   <link href="https://yihuayishijian.github.io/"/>
-  <updated>2021-12-23T13:01:01.457Z</updated>
+  <updated>2021-12-28T15:06:09.258Z</updated>
   <id>https://yihuayishijian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>淘来的校园二手项目练手</title>
+    <link href="https://yihuayishijian.github.io/2021/12/28/tao-lai-de-xiao-yuan-er-shou-xiang-mu-lian-shou/"/>
+    <id>https://yihuayishijian.github.io/2021/12/28/tao-lai-de-xiao-yuan-er-shou-xiang-mu-lian-shou/</id>
+    <published>2021-12-28T14:33:16.000Z</published>
+    <updated>2021-12-28T15:06:09.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;项目发布问题一&quot;&gt;&lt;a href=&quot;#项目发布问题一&quot; class=&quot;headerlink&quot; title=&quot;项目发布问题一:&quot;&gt;&lt;/a&gt;项目发布问题一:&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;图片显示不出来&lt;/p&gt;
+&lt;p&gt;在图片加载的路径加了 </summary>
+        
+      
+    
+    
+    
+    
+    <category term="java" scheme="https://yihuayishijian.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络</title>
